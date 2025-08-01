@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "597658737138",
+    "project_id": "code-learning-app-fa86a",
+    "storage_bucket": "code-learning-app-fa86a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597658737138:android:a9b6e71dc168a74b6c736b",
+        "android_client_info": {
+          "package_name": "com.example.code_learning_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597658737138-hm6b5i5enq0aiso68pulrapksqu7jcfr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.code_learning_app",
+            "certificate_hash": "6520e0ee0b4a93b468511ca5ec5127933edd89c2"
+          }
+        },
+        {
+          "client_id": "597658737138-26f9imme6joorqticg377su4tvl6hbmp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbhFHN0YPU0Ej_XicsR4oR07nsDkOsd98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597658737138-26f9imme6joorqticg377su4tvl6hbmp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "597658737138-k0hbftkoqtopq0qte4mb8ihhat3mh0j5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.codeLearningApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

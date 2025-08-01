@@ -1,12 +1,15 @@
 plugins {
     id("com.android.application")
+    // START: FlutterFire Configuration
+    id("com.google.gms.google-services")
+    // END: FlutterFire Configuration
     id("kotlin-android")
     id("dev.flutter.flutter-gradle-plugin") // Must come after other plugins
 }
 
 android {
     namespace = "com.example.code_learning_app"
-    compileSdk = 34 // Replace with latest compile SDK version
+    compileSdk = 35 // Replace with latest compile SDK version
 
     ndkVersion = "27.0.12077973" // Replace with your installed NDK version
 
@@ -22,7 +25,7 @@ android {
     defaultConfig {
         applicationId = "com.example.code_learning_app"
         minSdk = 21
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
     }
