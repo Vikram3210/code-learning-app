@@ -1,4 +1,6 @@
-# code_learning_app
+# CodeHub
+
+CodeHub is a modern mobile application designed to help users dive into the world of coding with ease. Whether you're a beginner exploring programming fundamentals or an enthusiast looking to practice your skills, CodeHub provides a user-friendly platform to get started.
 
 A new Flutter project.
 
