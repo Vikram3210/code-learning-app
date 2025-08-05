@@ -1,13 +1,16 @@
 # CodeHub
 
 CodeHub is a modern mobile application designed to help users dive into the world of coding with ease. Whether you're a beginner exploring programming fundamentals or an enthusiast looking to practice your skills, CodeHub provides a user-friendly platform to get started.
+878b7f2 (Added all project files)
 
-<<<<<<< HEAD
+CodeHub is a modern mobile application designed to help users dive into the world of coding with ease. Whether you're a beginner exploring programming fundamentals or an enthusiast looking to practice your skills, CodeHub provides a user-friendly platform to get started.
+
+
 A new Flutter project.
 
-=======
->>>>>>> 4496d54 (Initial commit)
-## Getting Started
+
+4496d54 (Initial commit)
+Getting Started
 
 This project is a starting point for a Flutter application.
 
