@@ -25,7 +25,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     setState(() => isLoading = true);
 
     if (_emailController.text.trim().isEmpty || _passwordController.text.trim().isEmpty) {
-      showCustomSnackBar("⚠️ Please enter email and password", bgColor: Colors.orange, icon: Icons.warning);
+      showPopup("⚠️ Please enter email and password", icon: Icons.warning, color: Colors.orange);
       setState(() => isLoading = false);
       return;
     }
@@ -41,26 +41,36 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         MaterialPageRoute(builder: (_) => const HomeScreen()),
       );
     } on FirebaseAuthException catch (e) {
-      showCustomSnackBar("❌ ${e.message}", bgColor: Colors.redAccent, icon: Icons.error);
+      showPopup("❌ ${e.message}", icon: Icons.error, color: Colors.redAccent);
     } finally {
       setState(() => isLoading = false);
     }
   }
 
-  void showCustomSnackBar(String message, {Color bgColor = Colors.redAccent, IconData? icon}) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
+  void showPopup(String message, {IconData? icon, Color? color}) {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: const Color(0xFF1E2A38),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         content: Row(
           children: [
-            if (icon != null) Icon(icon, color: Colors.white),
-            if (icon != null) const SizedBox(width: 8),
-            Expanded(child: Text(message)),
+            if (icon != null) Icon(icon, color: color ?? Colors.white),
+            if (icon != null) const SizedBox(width: 10),
+            Expanded(
+              child: Text(
+                message,
+                style: const TextStyle(color: Colors.white),
+              ),
+            ),
           ],
         ),
-        backgroundColor: bgColor,
-        behavior: SnackBarBehavior.floating,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        duration: const Duration(seconds: 3),
+        actions: [
+          TextButton(
+            child: const Text("OK", style: TextStyle(color: Colors.cyanAccent)),
+            onPressed: () => Navigator.of(ctx).pop(),
+          ),
+        ],
       ),
     );
   }
@@ -195,8 +205,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 child: OutlinedButton.icon(
                   onPressed: () async {
                     final user = await AuthService().signInWithGoogle(context);
-                    if (user == null) {
-                      showCustomSnackBar("❌ Google Sign-In failed", icon: Icons.error);
+                    if (context.mounted && user == null) {
+                      showPopup("❌ Google Sign-In failed", icon: Icons.error, color: Colors.redAccent);
                     }
                   },
                   style: OutlinedButton.styleFrom(

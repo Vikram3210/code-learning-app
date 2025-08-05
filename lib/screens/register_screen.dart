@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-
 import 'verify_email_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -15,14 +14,16 @@ class RegisterScreen extends StatefulWidget {
 class _RegisterScreenState extends State<RegisterScreen> {
   final _auth = FirebaseAuth.instance;
   final _formKey = GlobalKey<FormState>();
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _usernameController = TextEditingController();
+
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+  final _usernameController = TextEditingController();
 
   bool isLoading = false;
 
   final passwordRegex = RegExp(
-      r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,}$'); // 6+ chars, 1 lowercase, 1 uppercase, 1 digit, 1 special char
+    r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,}$',
+  );
 
   Future<void> registerUser() async {
     if (!_formKey.currentState!.validate()) return;
@@ -46,8 +47,30 @@ class _RegisterScreenState extends State<RegisterScreen> {
       );
     } on FirebaseAuthException catch (e) {
       setState(() => isLoading = false);
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(e.message ?? "Registration failed")),
+      showDialog(
+        context: context,
+        builder: (ctx) => AlertDialog(
+          backgroundColor: const Color(0xFF1E2A38),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          content: Row(
+            children: [
+              const Icon(Icons.error, color: Colors.redAccent),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Text(
+                  e.message ?? "Registration failed",
+                  style: const TextStyle(color: Colors.white),
+                ),
+              ),
+            ],
+          ),
+          actions: [
+            TextButton(
+              child: const Text("OK", style: TextStyle(color: Colors.cyanAccent)),
+              onPressed: () => Navigator.of(ctx).pop(),
+            ),
+          ],
+        ),
       );
     }
   }
@@ -80,34 +103,42 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   totalRepeatCount: 1,
                 ),
                 const SizedBox(height: 30),
+
+                // Username
                 TextFormField(
                   controller: _usernameController,
                   style: const TextStyle(color: Colors.white),
                   decoration: const InputDecoration(
                     labelText: 'Username',
                     labelStyle: TextStyle(color: Colors.white),
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
-                    ),
+                    border: OutlineInputBorder(),
+                    filled: true,
+                    fillColor: Colors.white12,
                   ),
                   validator: (value) =>
                   value!.isEmpty ? 'Enter a username' : null,
                 ),
-                const SizedBox(height: 15),
+
+                const SizedBox(height: 16),
+
+                // Email
                 TextFormField(
                   controller: _emailController,
                   style: const TextStyle(color: Colors.white),
                   decoration: const InputDecoration(
                     labelText: 'Email',
                     labelStyle: TextStyle(color: Colors.white),
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
-                    ),
+                    border: OutlineInputBorder(),
+                    filled: true,
+                    fillColor: Colors.white12,
                   ),
                   validator: (value) =>
                   value!.isEmpty ? 'Enter an email' : null,
                 ),
-                const SizedBox(height: 15),
+
+                const SizedBox(height: 16),
+
+                // Password
                 TextFormField(
                   controller: _passwordController,
                   obscureText: true,
@@ -118,9 +149,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     helperText:
                     'Min 6 chars, 1 upper, 1 lower, 1 digit, 1 special',
                     helperStyle: TextStyle(color: Colors.grey),
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
-                    ),
+                    border: OutlineInputBorder(),
+                    filled: true,
+                    fillColor: Colors.white12,
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -131,7 +162,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     return null;
                   },
                 ),
+
                 const SizedBox(height: 30),
+
                 isLoading
                     ? const Center(
                   child: CircularProgressIndicator(

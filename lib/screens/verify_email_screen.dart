@@ -21,7 +21,6 @@ class VerifyEmailScreen extends StatefulWidget {
   State<VerifyEmailScreen> createState() => _VerifyEmailScreenState();
 }
 
-
 class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   bool isChecking = false;
@@ -32,36 +31,85 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
     sendVerificationEmail();
   }
 
-  // Send verification email to the user
+  /// Send verification email to the current user
   Future<void> sendVerificationEmail() async {
     final user = _auth.currentUser;
     if (user != null && !user.emailVerified) {
       await user.sendEmailVerification();
-      print("✅ Verification email sent.");
+      if (context.mounted) {
+        showDialog(
+          context: context,
+          builder: (ctx) => AlertDialog(
+            backgroundColor: const Color(0xFF1E2A38),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            content: Row(
+              children: [
+                const Icon(Icons.check_circle, color: Colors.green),
+                const SizedBox(width: 10),
+                const Expanded(
+                  child: Text(
+                    "✅ Verification email sent.",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ],
+            ),
+            actions: [
+              TextButton(
+                child: const Text("OK", style: TextStyle(color: Colors.cyanAccent)),
+                onPressed: () => Navigator.of(ctx).pop(),
+              ),
+            ],
+          ),
+        );
+      }
     }
   }
 
-  // Check if user has verified their email
+  /// Check if user has verified their email
   Future<void> checkVerificationStatus() async {
     setState(() => isChecking = true);
-    await _auth.currentUser?.reload(); // refresh user data
+    await _auth.currentUser?.reload(); // Refresh user info
     final user = _auth.currentUser;
 
     if (user != null && user.emailVerified) {
-      print("✅ Email verified!");
+      if (context.mounted) {
+        showDialog(
+          context: context,
+          builder: (ctx) => AlertDialog(
+            backgroundColor: const Color(0xFF1E2A38),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            content: Row(
+              children: [
+                const Icon(Icons.verified, color: Colors.green),
+                const SizedBox(width: 10),
+                const Expanded(
+                  child: Text(
+                    "✅ Email verified!",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ],
+            ),
+            actions: [
+              TextButton(
+                child: const Text("OK", style: TextStyle(color: Colors.cyanAccent)),
+                onPressed: () => Navigator.of(ctx).pop(),
+              ),
+            ],
+          ),
+        );
+      }
 
-      // Save user to Firestore
-      await FirebaseFirestore.instance
-          .collection('users')
-          .doc(user.uid)
-          .set({
+      // ✅ Email is verified — save user to Firestore
+      await FirebaseFirestore.instance.collection('users').doc(user.uid).set({
         'uid': user.uid,
         'email': widget.email,
         'username': widget.username,
         'createdAt': Timestamp.now(),
       });
 
-      // Navigate to welcome screen
+      // 🎉 Navigate to welcome screen
       if (context.mounted) {
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (context) => const WelcomeScreen()),
@@ -69,12 +117,36 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
       }
     } else {
       setState(() => isChecking = false);
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("❌ Email not verified yet.")),
-      );
+      if (context.mounted) {
+        showDialog(
+          context: context,
+          builder: (ctx) => AlertDialog(
+            backgroundColor: const Color(0xFF1E2A38),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            content: Row(
+              children: [
+                const Icon(Icons.error, color: Colors.redAccent),
+                const SizedBox(width: 10),
+                const Expanded(
+                  child: Text(
+                    "❌ Email not verified yet.",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ],
+            ),
+            actions: [
+              TextButton(
+                child: const Text("OK", style: TextStyle(color: Colors.cyanAccent)),
+                onPressed: () => Navigator.of(ctx).pop(),
+              ),
+            ],
+          ),
+        );
+      }
     }
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -131,5 +203,4 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
       ),
     );
   }
-
 }
