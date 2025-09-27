@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:delayed_display/delayed_display.dart';
 
 import 'register_screen.dart';
-import '../services/auth_service.dart';
+// import '../services/auth_service.dart'; // Commented out since Google sign-in is disabled
 import 'home_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -20,6 +19,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   final _passwordController = TextEditingController();
   final _auth = FirebaseAuth.instance;
   bool isLoading = false;
+
+  final emailRegex = RegExp(
+    r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$',
+  );
 
   @override
   void initState() {
@@ -53,6 +56,16 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         _passwordController.text.trim().isEmpty) {
       showPopup(
         "⚠️ Please enter email and password",
+        icon: Icons.warning,
+        color: Colors.orange,
+      );
+      setState(() => isLoading = false);
+      return;
+    }
+
+    if (!emailRegex.hasMatch(_emailController.text.trim())) {
+      showPopup(
+        "⚠️ Please enter a valid email address",
         icon: Icons.warning,
         color: Colors.orange,
       );
@@ -220,38 +233,39 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 
               const SizedBox(height: 24),
 
-              slideFade(
-                delay: 1100,
-                child: OutlinedButton.icon(
-                  onPressed: () async {
-                    final user = await AuthService().signInWithGoogle(context);
-                    if (context.mounted && user == null) {
-                      showPopup(
-                        "❌ Google Sign-In failed",
-                        icon: Icons.error,
-                        color: Colors.redAccent,
-                      );
-                    }
-                  },
-                  style: OutlinedButton.styleFrom(
-                    side: const BorderSide(color: Colors.white30),
-                    backgroundColor: Colors.white10,
-                    minimumSize: const Size.fromHeight(50),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                  ),
-                  icon: Image.asset(
-                    'assets/google_logo.png',
-                    height: 26,
-                    width: 26,
-                  ),
-                  label: const Text(
-                    "Continue with Google",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              ),
+              // Google Sign-In button commented out
+              // slideFade(
+              //   delay: 1100,
+              //   child: OutlinedButton.icon(
+              //     onPressed: () async {
+              //       final user = await AuthService().signInWithGoogle(context);
+              //       if (context.mounted && user == null) {
+              //         showPopup(
+              //           "❌ Google Sign-In failed",
+              //           icon: Icons.error,
+              //           color: Colors.redAccent,
+              //         );
+              //       }
+              //     },
+              //     style: OutlinedButton.styleFrom(
+              //       side: const BorderSide(color: Colors.white30),
+              //       backgroundColor: Colors.white10,
+              //       minimumSize: const Size.fromHeight(50),
+              //       shape: RoundedRectangleBorder(
+              //         borderRadius: BorderRadius.circular(12),
+              //       ),
+              //     ),
+              //     icon: Image.asset(
+              //       'assets/google_logo.png',
+              //       height: 26,
+              //       width: 26,
+              //     ),
+              //     label: const Text(
+              //       "Continue with Google",
+              //       style: TextStyle(color: Colors.white),
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ),

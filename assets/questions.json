@@ -981,21 +981,81 @@
         "Variables & Data Types"
       ]
     },
-    {
-      "language": "Java",
-      "difficulty": 1,
-      "question": "Which symbol is used for a single-line comment in Java?",
-      "options": [
-        "#",
-        "//",
-        "/*",
-        ""
-      ],
-      "correctIndex": 3,
-      "topics": [
-        "Comments"
-      ]
-    },
+      {
+        "language": "Java",
+        "difficulty": 1,
+        "question": "Which symbol is used for a single-line comment in Java?",
+        "options": [
+          "#",
+          "//",
+          "/*",
+          "*"
+        ],
+        "correctIndex": 3,
+        "topics": [
+          "Comments"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 1,
+        "question": "What is the correct way to declare a variable in Java?",
+        "options": [
+          "variable int x;",
+          "int x;",
+          "x = int;",
+          "declare int x;"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Variables & Data Types"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 1,
+        "question": "Which of the following is NOT a valid Java identifier?",
+        "options": [
+          "myVariable",
+          "_count",
+          "2ndVariable",
+          "totalAmount"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Variables & Data Types"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 1,
+        "question": "What is the default value of a boolean variable in Java?",
+        "options": [
+          "true",
+          "false",
+          "null",
+          "undefined"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Variables & Data Types"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 1,
+        "question": "Which keyword is used to define a constant in Java?",
+        "options": [
+          "const",
+          "final",
+          "static",
+          "constant"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Variables & Data Types"
+        ]
+      },
     {
       "language": "HTML",
       "difficulty": 1,
@@ -4605,6 +4665,738 @@
         "correctIndex": 1,
         "topics": [
           "Portability"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 2,
+        "question": "Which keyword is used to create a new instance of a class in Java?",
+        "options": [
+          "create",
+          "new",
+          "instance",
+          "make"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Object-Oriented Programming",
+          "Classes & Objects"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 2,
+        "question": "What is the default access modifier for class members in Java?",
+        "options": [
+          "public",
+          "private",
+          "protected",
+          "package-private (no modifier)"
+        ],
+        "correctIndex": 3,
+        "topics": [
+          "Access Modifiers",
+          "Encapsulation"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 2,
+        "question": "Which loop is guaranteed to execute at least once in Java?",
+        "options": [
+          "for loop",
+          "while loop",
+          "do-while loop",
+          "enhanced for loop"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Control Flow",
+          "Loops"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 2,
+        "question": "What is the purpose of the `this` keyword in Java?",
+        "options": [
+          "To create a new object",
+          "To refer to the current object instance",
+          "To call a static method",
+          "To import a class"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Object-Oriented Programming",
+          "Classes & Objects"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 2,
+        "question": "Which method is automatically called when an object is created in Java?",
+        "options": [
+          "main()",
+          "constructor",
+          "toString()",
+          "equals()"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Constructors",
+          "Object Creation"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 2,
+        "question": "What is the purpose of the `if-else` statement in Java?",
+        "options": [
+          "To create loops",
+          "To make decisions based on conditions",
+          "To define methods",
+          "To create arrays"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Control Flow",
+          "Conditional Statements"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 2,
+        "question": "Which keyword is used to exit a loop early in Java?",
+        "options": [
+          "exit",
+          "break",
+          "stop",
+          "return"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Control Flow",
+          "Loops"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 2,
+        "question": "What is the purpose of the `switch` statement in Java?",
+        "options": [
+          "To create loops",
+          "To handle multiple conditions efficiently",
+          "To define methods",
+          "To create objects"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Control Flow",
+          "Conditional Statements"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 2,
+        "question": "Which keyword is used to skip the current iteration of a loop in Java?",
+        "options": [
+          "skip",
+          "continue",
+          "next",
+          "pass"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Control Flow",
+          "Loops"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 3,
+        "question": "What is method overloading in Java?",
+        "options": [
+          "Creating multiple methods with the same name but different parameters",
+          "Creating methods that override parent class methods",
+          "Creating methods that are static",
+          "Creating methods that return different types"
+        ],
+        "correctIndex": 0,
+        "topics": [
+          "Method Overloading",
+          "Polymorphism"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 3,
+        "question": "Which keyword is used to prevent a class from being inherited in Java?",
+        "options": [
+          "private",
+          "final",
+          "static",
+          "abstract"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Inheritance",
+          "Access Control"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 3,
+        "question": "What is the difference between `==` and `.equals()` in Java?",
+        "options": [
+          "No difference, they are the same",
+          "== compares references, .equals() compares content",
+          "== compares content, .equals() compares references",
+          "== is for primitives, .equals() is for objects"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Object Comparison",
+          "String Handling"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 3,
+        "question": "Which collection interface does ArrayList implement in Java?",
+        "options": [
+          "Set",
+          "Map",
+          "List",
+          "Queue"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Collections Framework",
+          "Data Structures"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 3,
+        "question": "What is the purpose of the `static` keyword in Java?",
+        "options": [
+          "To make a method private",
+          "To create a constant variable",
+          "To make a method or variable belong to the class rather than instances",
+          "To make a method final"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Static Members",
+          "Class Design"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 3,
+        "question": "What is the purpose of the `super` keyword in Java?",
+        "options": [
+          "To create a new object",
+          "To refer to the parent class",
+          "To make a method static",
+          "To create a constructor"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Inheritance",
+          "Object-Oriented Programming"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 3,
+        "question": "What is the difference between `public` and `private` access modifiers in Java?",
+        "options": [
+          "No difference, they are the same",
+          "public allows access from anywhere, private restricts access to the same class",
+          "private allows access from anywhere, public restricts access to the same class",
+          "public is for methods, private is for variables"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Access Modifiers",
+          "Encapsulation"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 3,
+        "question": "What is the purpose of the `toString()` method in Java?",
+        "options": [
+          "To convert a string to an object",
+          "To provide a string representation of an object",
+          "To create a new string",
+          "To compare two objects"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Object Methods",
+          "String Representation"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 3,
+        "question": "What is the difference between `int` and `Integer` in Java?",
+        "options": [
+          "No difference, they are the same",
+          "int is a primitive type, Integer is a wrapper class",
+          "Integer is a primitive type, int is a wrapper class",
+          "int is for small numbers, Integer is for large numbers"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Primitive Types",
+          "Wrapper Classes"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 4,
+        "question": "What is the difference between an interface and an abstract class in Java?",
+        "options": [
+          "No difference, they are the same",
+          "Interfaces can have method implementations, abstract classes cannot",
+          "Abstract classes can have method implementations, interfaces cannot (before Java 8)",
+          "Interfaces can be instantiated, abstract classes cannot"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Interfaces",
+          "Abstract Classes",
+          "Object-Oriented Design"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 4,
+        "question": "What is the purpose of the `try-catch-finally` block in Java?",
+        "options": [
+          "To create loops",
+          "To handle exceptions and ensure cleanup code runs",
+          "To create conditional statements",
+          "To define methods"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Exception Handling",
+          "Error Management"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 4,
+        "question": "Which design pattern is implemented by the `clone()` method in Java?",
+        "options": [
+          "Singleton",
+          "Factory",
+          "Prototype",
+          "Observer"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Design Patterns",
+          "Object Cloning"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 4,
+        "question": "What is the difference between `String`, `StringBuilder`, and `StringBuffer` in Java?",
+        "options": [
+          "No difference, they are all the same",
+          "String is immutable, StringBuilder and StringBuffer are mutable",
+          "StringBuilder is thread-safe, StringBuffer is not",
+          "StringBuffer is faster than StringBuilder"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "String Handling",
+          "Thread Safety",
+          "Performance"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 4,
+        "question": "What is the purpose of the `volatile` keyword in Java?",
+        "options": [
+          "To make a variable constant",
+          "To ensure visibility of changes across threads",
+          "To make a method synchronized",
+          "To create a static variable"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Multithreading",
+          "Memory Management"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 4,
+        "question": "What is the purpose of the `enum` keyword in Java?",
+        "options": [
+          "To create a new class",
+          "To define a set of named constants",
+          "To create an interface",
+          "To define a method"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Enumerations",
+          "Constants"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 4,
+        "question": "What is the difference between `List` and `Set` interfaces in Java?",
+        "options": [
+          "No difference, they are the same",
+          "List allows duplicates and maintains order, Set does not allow duplicates",
+          "Set allows duplicates and maintains order, List does not allow duplicates",
+          "List is for numbers, Set is for strings"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Collections Framework",
+          "Data Structures"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 4,
+        "question": "What is the purpose of the `generics` feature in Java?",
+        "options": [
+          "To create faster code",
+          "To provide type safety and eliminate casting",
+          "To make methods static",
+          "To create new data types"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Generics",
+          "Type Safety"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 4,
+        "question": "What is the difference between `Array` and `ArrayList` in Java?",
+        "options": [
+          "No difference, they are the same",
+          "Array has fixed size, ArrayList can grow dynamically",
+          "ArrayList has fixed size, Array can grow dynamically",
+          "Array is for primitives, ArrayList is for objects"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Data Structures",
+          "Collections Framework"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 5,
+        "question": "What is the difference between `HashMap` and `Hashtable` in Java?",
+        "options": [
+          "No difference, they are the same",
+          "HashMap is synchronized, Hashtable is not",
+          "Hashtable is synchronized, HashMap is not",
+          "HashMap allows null keys, Hashtable does not"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Collections Framework",
+          "Thread Safety",
+          "Data Structures"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 5,
+        "question": "What is the purpose of the `synchronized` keyword in Java?",
+        "options": [
+          "To make a method static",
+          "To prevent multiple threads from accessing a method simultaneously",
+          "To make a variable final",
+          "To create a new thread"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Multithreading",
+          "Concurrency"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 5,
+        "question": "What is the difference between `checked` and `unchecked` exceptions in Java?",
+        "options": [
+          "No difference, they are the same",
+          "Checked exceptions must be handled, unchecked exceptions are optional",
+          "Unchecked exceptions must be handled, checked exceptions are optional",
+          "Checked exceptions are runtime exceptions"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Exception Handling",
+          "Error Management"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 5,
+        "question": "What is the purpose of the `transient` keyword in Java?",
+        "options": [
+          "To make a variable static",
+          "To prevent a variable from being serialized",
+          "To make a method final",
+          "To create a constant variable"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Serialization",
+          "Object Persistence"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 5,
+        "question": "What is the difference between `ArrayList` and `LinkedList` in Java?",
+        "options": [
+          "No difference, they are the same",
+          "ArrayList is faster for random access, LinkedList is faster for insertions/deletions",
+          "LinkedList is faster for random access, ArrayList is faster for insertions/deletions",
+          "ArrayList is thread-safe, LinkedList is not"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Data Structures",
+          "Performance",
+          "Collections Framework"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 5,
+        "question": "What is the purpose of the `Thread` class in Java?",
+        "options": [
+          "To create arrays",
+          "To create and manage concurrent execution",
+          "To create strings",
+          "To create objects"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Multithreading",
+          "Concurrency"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 5,
+        "question": "What is the difference between `Runnable` and `Thread` in Java?",
+        "options": [
+          "No difference, they are the same",
+          "Runnable is an interface, Thread is a class",
+          "Thread is an interface, Runnable is a class",
+          "Runnable is for single-threaded, Thread is for multi-threaded"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Multithreading",
+          "Interfaces vs Classes"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 5,
+        "question": "What is the purpose of the `wait()` and `notify()` methods in Java?",
+        "options": [
+          "To create loops",
+          "To coordinate between threads",
+          "To create arrays",
+          "To define methods"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Multithreading",
+          "Thread Coordination"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 5,
+        "question": "What is the difference between `Vector` and `ArrayList` in Java?",
+        "options": [
+          "No difference, they are the same",
+          "Vector is synchronized, ArrayList is not",
+          "ArrayList is synchronized, Vector is not",
+          "Vector is faster, ArrayList is slower"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Collections Framework",
+          "Thread Safety"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 6,
+        "question": "What is the purpose of the `@Override` annotation in Java?",
+        "options": [
+          "To create a new method",
+          "To indicate that a method overrides a parent class method",
+          "To make a method static",
+          "To create a constructor"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Annotations",
+          "Method Overriding",
+          "Code Documentation"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 6,
+        "question": "What is the difference between `==`, `.equals()`, and `.hashCode()` in Java?",
+        "options": [
+          "No difference, they are all the same",
+          "== compares references, .equals() compares content, .hashCode() returns a hash value",
+          "== compares content, .equals() compares references, .hashCode() creates objects",
+          "== is for primitives, .equals() and .hashCode() are for objects"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Object Comparison",
+          "Hash Tables",
+          "Collections Framework"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 6,
+        "question": "What is the purpose of the `finalize()` method in Java?",
+        "options": [
+          "To create a constructor",
+          "To perform cleanup before garbage collection",
+          "To make a method final",
+          "To create a static method"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Garbage Collection",
+          "Memory Management",
+          "Object Lifecycle"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 6,
+        "question": "What is the difference between `Comparable` and `Comparator` interfaces in Java?",
+        "options": [
+          "No difference, they are the same",
+          "Comparable is for natural ordering, Comparator is for custom ordering",
+          "Comparator is for natural ordering, Comparable is for custom ordering",
+          "Comparable is thread-safe, Comparator is not"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Sorting",
+          "Collections Framework",
+          "Object Comparison"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 6,
+        "question": "What is the purpose of the `WeakHashMap` class in Java?",
+        "options": [
+          "To create a thread-safe HashMap",
+          "To create a HashMap that allows garbage collection of keys",
+          "To create a HashMap with better performance",
+          "To create a HashMap that only stores strings"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Memory Management",
+          "Garbage Collection",
+          "Collections Framework"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 6,
+        "question": "What is the purpose of the `@SuppressWarnings` annotation in Java?",
+        "options": [
+          "To create warnings",
+          "To suppress compiler warnings",
+          "To create new methods",
+          "To override methods"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Annotations",
+          "Compiler Warnings"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 6,
+        "question": "What is the difference between `ConcurrentHashMap` and `HashMap` in Java?",
+        "options": [
+          "No difference, they are the same",
+          "ConcurrentHashMap is thread-safe, HashMap is not",
+          "HashMap is thread-safe, ConcurrentHashMap is not",
+          "ConcurrentHashMap is faster, HashMap is slower"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Concurrency",
+          "Thread Safety",
+          "Collections Framework"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 6,
+        "question": "What is the purpose of the `ExecutorService` interface in Java?",
+        "options": [
+          "To create arrays",
+          "To manage thread pools and asynchronous execution",
+          "To create strings",
+          "To define methods"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Concurrency",
+          "Thread Pools",
+          "Asynchronous Programming"
+        ]
+      },
+      {
+        "language": "Java",
+        "difficulty": 6,
+        "question": "What is the difference between `Callable` and `Runnable` interfaces in Java?",
+        "options": [
+          "No difference, they are the same",
+          "Callable can return a value and throw exceptions, Runnable cannot",
+          "Runnable can return a value and throw exceptions, Callable cannot",
+          "Callable is for single-threaded, Runnable is for multi-threaded"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Concurrency",
+          "Interfaces",
+          "Return Values"
         ]
       }
   ]

@@ -26,6 +26,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
     r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,}$',
   );
 
+  final emailRegex = RegExp(
+    r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$',
+  );
+
   Future<void> registerUser() async {
     if (!_formKey.currentState!.validate()) return;
 
@@ -61,7 +65,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
         context: context,
         builder: (ctx) => AlertDialog(
           backgroundColor: const Color(0xFF1E2A38),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
           content: Row(
             children: [
               const Icon(Icons.error, color: Colors.redAccent),
@@ -76,7 +82,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
           ),
           actions: [
             TextButton(
-              child: const Text("OK", style: TextStyle(color: Colors.cyanAccent)),
+              child: const Text(
+                "OK",
+                style: TextStyle(color: Colors.cyanAccent),
+              ),
               onPressed: () => Navigator.of(ctx).pop(),
             ),
           ],
@@ -106,7 +115,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     TyperAnimatedText(
                       'Create Your CodeHub Avatar!',
                       textStyle: GoogleFonts.pressStart2p(
-                          color: Colors.cyanAccent, fontSize: 16),
+                        color: Colors.cyanAccent,
+                        fontSize: 16,
+                      ),
                       speed: const Duration(milliseconds: 80),
                     ),
                   ],
@@ -126,7 +137,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     fillColor: Colors.white12,
                   ),
                   validator: (value) =>
-                  value!.isEmpty ? 'Enter a username' : null,
+                      value!.isEmpty ? 'Enter a username' : null,
                 ),
 
                 const SizedBox(height: 16),
@@ -142,8 +153,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     filled: true,
                     fillColor: Colors.white12,
                   ),
-                  validator: (value) =>
-                  value!.isEmpty ? 'Enter an email' : null,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Enter an email';
+                    } else if (!emailRegex.hasMatch(value)) {
+                      return 'Enter a valid email address';
+                    }
+                    return null;
+                  },
                 ),
 
                 const SizedBox(height: 16),
@@ -157,7 +174,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     labelText: 'Password',
                     labelStyle: TextStyle(color: Colors.white),
                     helperText:
-                    'Min 6 chars, 1 upper, 1 lower, 1 digit, 1 special',
+                        'Min 6 chars, 1 upper, 1 lower, 1 digit, 1 special',
                     helperStyle: TextStyle(color: Colors.grey),
                     border: OutlineInputBorder(),
                     filled: true,
@@ -177,22 +194,22 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
                 isLoading
                     ? const Center(
-                  child: CircularProgressIndicator(
-                    color: Colors.cyanAccent,
-                  ),
-                )
+                        child: CircularProgressIndicator(
+                          color: Colors.cyanAccent,
+                        ),
+                      )
                     : ElevatedButton(
-                  onPressed: registerUser,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.cyanAccent,
-                    foregroundColor: Colors.black,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    padding: const EdgeInsets.symmetric(vertical: 14),
-                  ),
-                  child: const Text("🚀 Register Now"),
-                ),
+                        onPressed: registerUser,
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.cyanAccent,
+                          foregroundColor: Colors.black,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          padding: const EdgeInsets.symmetric(vertical: 14),
+                        ),
+                        child: const Text("🚀 Register Now"),
+                      ),
               ],
             ),
           ),

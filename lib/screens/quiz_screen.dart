@@ -52,6 +52,32 @@ class _QuizScreenState extends State<QuizScreen> {
       limit: 10,
     );
     if (!mounted) return;
+
+    // Check if we have questions, if not show error and return
+    if (fetched.isEmpty) {
+      setState(() {
+        _loading = false;
+      });
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              'No questions available for ${widget.languageName} Level ${widget.levelIndex + 1}',
+            ),
+            backgroundColor: Colors.red,
+            duration: const Duration(seconds: 3),
+          ),
+        );
+        // Navigate back after showing error
+        Future.delayed(const Duration(seconds: 2), () {
+          if (mounted && Navigator.canPop(context)) {
+            Navigator.of(context).pop();
+          }
+        });
+      }
+      return;
+    }
+
     setState(() {
       _questions = fetched;
       _loading = false;
@@ -76,6 +102,12 @@ class _QuizScreenState extends State<QuizScreen> {
 
   void _answer(int index) {
     if (_answered) return;
+
+    // Safety check to prevent RangeError
+    if (_questions.isEmpty || _currentIndex >= _questions.length) {
+      return;
+    }
+
     _answered = true;
     _selectedIndex = index;
     final correct = _questions[_currentIndex].correctIndex;
@@ -91,6 +123,14 @@ class _QuizScreenState extends State<QuizScreen> {
 
   Future<void> _nextQuestion() async {
     _answered = false;
+
+    // Safety check to prevent RangeError
+    if (_questions.isEmpty) {
+      _timer?.cancel();
+      await _finishQuiz();
+      return;
+    }
+
     if (_currentIndex < _questions.length - 1) {
       setState(() {
         _currentIndex += 1;
@@ -107,13 +147,32 @@ class _QuizScreenState extends State<QuizScreen> {
       final user = _auth.currentUser;
       if (user != null) {
         // Award total score as XP; also mark level complete
-        await _progress.completeLevel(
+        print(
+          '🎯 Completing level: ${widget.levelIndex + 1} for ${widget.languageName}',
+        );
+        print('🎯 Level index (0-based): ${widget.levelIndex}');
+        print('🎯 Total levels: 6');
+
+        final result = await _progress.completeLevel(
           userId: user.uid,
           languageName: widget.languageName,
           completedLevelIndex: widget.levelIndex,
           totalLevels: 6,
           xpPerLevel: _score, // award score
         );
+
+        print('🎯 Result from completeLevel: $result');
+
+        // Check if course was completed and show celebration
+        final courseCompleted = result['completed'] as bool? ?? false;
+        print('🎯 Course completed: $courseCompleted');
+
+        if (courseCompleted && mounted) {
+          print('🎉 Showing celebration dialog!');
+          _showCourseCompletionCelebration();
+        } else {
+          print('❌ No celebration - course not completed or not mounted');
+        }
       }
     } catch (e) {
       if (mounted) {
@@ -123,11 +182,31 @@ class _QuizScreenState extends State<QuizScreen> {
         print('Language: ${widget.languageName}');
         print('Level: ${widget.levelIndex}');
 
+        // Show user-friendly error message
+        String errorMessage = 'Could not save progress';
+        if (e.toString().contains('cloud_firestore/unknown')) {
+          errorMessage = 'Database error - please try again';
+        } else if (e.toString().contains('permission')) {
+          errorMessage = 'Permission error - please try logging in again';
+        } else if (e.toString().contains('timeout')) {
+          errorMessage = 'Request timeout - please try again';
+        } else {
+          errorMessage = 'Error: ${e.toString()}';
+        }
+
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Could not save progress: ${e.toString()}'),
-            backgroundColor: Colors.redAccent,
-            duration: const Duration(seconds: 5),
+            content: Text(errorMessage),
+            backgroundColor: Colors.orange,
+            duration: const Duration(seconds: 4),
+            action: SnackBarAction(
+              label: 'Retry',
+              textColor: Colors.white,
+              onPressed: () {
+                // Retry saving progress
+                _finishQuiz();
+              },
+            ),
           ),
         );
       }
@@ -142,6 +221,100 @@ class _QuizScreenState extends State<QuizScreen> {
         }
       });
     }
+  }
+
+  void _showCourseCompletionCelebration() {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => AlertDialog(
+        backgroundColor: const Color(0xFF1E2A38),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            // Celebration animation
+            const Icon(Icons.emoji_events, color: Colors.amberAccent, size: 80),
+            const SizedBox(height: 16),
+
+            // Title
+            Text(
+              '🎉 Congratulations! 🎉',
+              style: GoogleFonts.pressStart2p(
+                fontSize: 16,
+                color: Colors.cyanAccent,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 12),
+
+            // Message
+            Text(
+              'You\'ve completed the entire ${widget.languageName} course!',
+              style: GoogleFonts.robotoMono(fontSize: 14, color: Colors.white),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 16),
+
+            // Badge info
+            Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: Colors.amberAccent.withOpacity(0.1),
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: Colors.amberAccent.withOpacity(0.3)),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Icon(
+                    Icons.emoji_events,
+                    color: Colors.amberAccent,
+                    size: 24,
+                  ),
+                  const SizedBox(width: 8),
+                  Text(
+                    'Badge Earned: Completed ${widget.languageName}',
+                    style: GoogleFonts.robotoMono(
+                      fontSize: 12,
+                      color: Colors.amberAccent,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+
+            // Continue button
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+                // Navigate back to roadmap
+                if (Navigator.canPop(context)) {
+                  Navigator.of(context).pop(true);
+                }
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.cyanAccent,
+                foregroundColor: Colors.black,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 24,
+                  vertical: 12,
+                ),
+              ),
+              child: Text(
+                'Continue',
+                style: GoogleFonts.robotoMono(fontWeight: FontWeight.bold),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   @override
@@ -166,6 +339,34 @@ class _QuizScreenState extends State<QuizScreen> {
         ),
       );
     }
+
+    // Safety check to prevent RangeError
+    if (_questions.isEmpty || _currentIndex >= _questions.length) {
+      return Scaffold(
+        backgroundColor: const Color(0xFF0B1C2C),
+        appBar: AppBar(
+          title: Text(
+            '${widget.languageName} • Level ${widget.levelIndex + 1}',
+          ),
+          backgroundColor: const Color(0xFF0B1C2C),
+        ),
+        body: const Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.error_outline, color: Colors.red, size: 64),
+              SizedBox(height: 16),
+              Text(
+                'No questions available for this level',
+                style: TextStyle(color: Colors.white, fontSize: 18),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     final q = _questions[_currentIndex];
     return Scaffold(
       backgroundColor: const Color(0xFF0B1C2C),

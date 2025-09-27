@@ -758,19 +758,34 @@ class _LearningRoadmapScreenState extends State<LearningRoadmapScreen> {
                                 color: widget.languageColor.withOpacity(0.2),
                                 borderRadius: BorderRadius.circular(8),
                               ),
-                              child: Text(
-                                _courseCompleted
-                                    ? 'Completed'
-                                    : (_completedLevels < 2
-                                          ? 'Beginner'
-                                          : (_completedLevels < 4
-                                                ? 'Intermediate'
-                                                : 'Advanced')),
-                                style: GoogleFonts.robotoMono(
-                                  fontSize: 10,
-                                  color: widget.languageColor,
-                                  fontWeight: FontWeight.bold,
-                                ),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  if (_courseCompleted) ...[
+                                    const Icon(
+                                      Icons.emoji_events,
+                                      color: Colors.amberAccent,
+                                      size: 12,
+                                    ),
+                                    const SizedBox(width: 4),
+                                  ],
+                                  Text(
+                                    _courseCompleted
+                                        ? 'Completed'
+                                        : (_completedLevels < 2
+                                              ? 'Beginner'
+                                              : (_completedLevels < 4
+                                                    ? 'Intermediate'
+                                                    : 'Advanced')),
+                                    style: GoogleFonts.robotoMono(
+                                      fontSize: 10,
+                                      color: _courseCompleted
+                                          ? Colors.amberAccent
+                                          : widget.languageColor,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ],

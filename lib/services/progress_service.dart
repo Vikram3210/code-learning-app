@@ -41,95 +41,324 @@ class ProgressService {
     required int totalLevels,
     int xpPerLevel = 100,
   }) async {
-    try {
-      final userRef = _firestore.collection('users').doc(userId);
-      final progressRef = userRef.collection('progress').doc(languageName);
+    int retryCount = 0;
+    const maxRetries = 3;
 
-      return await _firestore.runTransaction((txn) async {
-        final progressSnap = await txn.get(progressRef);
-        final userSnap = await txn.get(userRef);
+    while (retryCount < maxRetries) {
+      try {
+        final userRef = _firestore.collection('users').doc(userId);
+        final progressRef = userRef.collection('progress').doc(languageName);
 
-        int currentCompletedLevels = 0;
-        int languageXp = 0;
-        bool courseCompleted = false;
+        return await _firestore.runTransaction((txn) async {
+          final progressSnap = await txn.get(progressRef);
+          final userSnap = await txn.get(userRef);
 
-        if (progressSnap.exists) {
-          final data = progressSnap.data() as Map<String, dynamic>;
-          currentCompletedLevels = (data['completedLevels'] ?? 0) as int;
-          languageXp = (data['xp'] ?? 0) as int;
-          courseCompleted = (data['completed'] ?? false) as bool;
-        }
+          int currentCompletedLevels = 0;
+          int languageXp = 0;
+          bool courseCompleted = false;
 
-        // Only allow marking the next level in order
-        if (completedLevelIndex != currentCompletedLevels) {
-          // Return existing data without changes
+          // Initialize user variables early
+          int totalXp = 0;
+          List<dynamic> badges = [];
+          String username = '';
+
+          if (progressSnap.exists) {
+            final data = progressSnap.data() as Map<String, dynamic>;
+            currentCompletedLevels = (data['completedLevels'] ?? 0) as int;
+            languageXp = (data['xp'] ?? 0) as int;
+            courseCompleted = (data['completed'] ?? false) as bool;
+          }
+
+          // Only allow marking the next level in order
+          print(
+            '🔍 Level validation: completedLevelIndex=$completedLevelIndex, currentCompletedLevels=$currentCompletedLevels, courseCompleted=$courseCompleted',
+          );
+          if (completedLevelIndex != currentCompletedLevels) {
+            print('❌ Level validation failed - returning existing data');
+            // Return existing data without changes, but still check for badge if course is completed
+            if (courseCompleted) {
+              print('🎉 Course already completed - checking for badge');
+              // Still award badge if not already present
+              final badgeId = 'completed_$languageName';
+              final hasBadge = badges.any(
+                (b) => (b is Map<String, dynamic>) && b['id'] == badgeId,
+              );
+              if (!hasBadge) {
+                print('🏆 Adding missing badge: $badgeId');
+                badges = List<dynamic>.from(badges)
+                  ..add({
+                    'id': badgeId,
+                    'title': 'Completed $languageName',
+                    'awardedAt': FieldValue.serverTimestamp(),
+                  });
+
+                // Update user document with badge
+                txn.set(userRef, {
+                  'xp': totalXp,
+                  'badges': badges,
+                  'username': username,
+                  'updatedAt': FieldValue.serverTimestamp(),
+                }, SetOptions(merge: true));
+              }
+            }
+            return {
+              'completedLevels': currentCompletedLevels,
+              'xp': languageXp,
+              'completed': courseCompleted,
+            };
+          }
+          print('✅ Level validation passed');
+
+          currentCompletedLevels += 1;
+          languageXp += xpPerLevel;
+          courseCompleted = currentCompletedLevels >= totalLevels;
+
+          txn.set(progressRef, {
+            'language': languageName,
+            'completedLevels': currentCompletedLevels,
+            'xp': languageXp,
+            'completed': courseCompleted,
+            'updatedAt': FieldValue.serverTimestamp(),
+          }, SetOptions(merge: true));
+
+          // Update user's aggregate XP and badges
+          if (userSnap.exists) {
+            final u = userSnap.data() as Map<String, dynamic>;
+            totalXp = (u['xp'] ?? 0) as int;
+            badges = (u['badges'] ?? []) as List<dynamic>;
+            username = (u['username'] ?? '') as String;
+          } else {
+            // If user document doesn't exist, create it with basic structure
+            username = 'User'; // Default username
+          }
+          totalXp += xpPerLevel;
+
+          // Award badge on course completion if not already present
+          if (courseCompleted) {
+            print('🎉 Course completed! Awarding badge for $languageName');
+            print(
+              'Current completed levels: $currentCompletedLevels, Total levels: $totalLevels',
+            );
+            final badgeId = 'completed_$languageName';
+            final hasBadge = badges.any(
+              (b) => (b is Map<String, dynamic>) && b['id'] == badgeId,
+            );
+            if (!hasBadge) {
+              print('🏆 Adding new badge: $badgeId');
+              badges = List<dynamic>.from(badges)
+                ..add({
+                  'id': badgeId,
+                  'title': 'Completed $languageName',
+                  'awardedAt': FieldValue.serverTimestamp(),
+                });
+            } else {
+              print('⚠️ Badge already exists: $badgeId');
+            }
+          } else {
+            print(
+              '❌ Course not completed yet. Levels: $currentCompletedLevels/$totalLevels',
+            );
+          }
+
+          txn.set(userRef, {
+            'xp': totalXp,
+            'badges': badges,
+            'username': username,
+            'updatedAt': FieldValue.serverTimestamp(),
+          }, SetOptions(merge: true));
+
           return {
             'completedLevels': currentCompletedLevels,
             'xp': languageXp,
             'completed': courseCompleted,
+            'totalXp': totalXp,
           };
+        });
+      } catch (e) {
+        retryCount++;
+        print('ProgressService.completeLevel error (attempt $retryCount): $e');
+        print(
+          'UserId: $userId, Language: $languageName, Level: $completedLevelIndex',
+        );
+
+        if (retryCount >= maxRetries) {
+          // If all retries failed, try a simpler approach without transaction
+          print('All retries failed, attempting non-transactional save...');
+          try {
+            return await _completeLevelWithoutTransaction(
+              userId: userId,
+              languageName: languageName,
+              completedLevelIndex: completedLevelIndex,
+              totalLevels: totalLevels,
+              xpPerLevel: xpPerLevel,
+            );
+          } catch (fallbackError) {
+            print('Fallback method also failed: $fallbackError');
+            // Return a basic response to prevent app crash
+            return {
+              'completedLevels': 0,
+              'xp': 0,
+              'completed': false,
+              'totalXp': 0,
+            };
+          }
         }
 
-        currentCompletedLevels += 1;
-        languageXp += xpPerLevel;
-        courseCompleted = currentCompletedLevels >= totalLevels;
+        // Wait before retrying (exponential backoff)
+        await Future.delayed(Duration(milliseconds: 500 * retryCount));
+      }
+    }
 
-        txn.set(progressRef, {
-          'language': languageName,
-          'completedLevels': currentCompletedLevels,
-          'xp': languageXp,
-          'completed': courseCompleted,
-          'updatedAt': FieldValue.serverTimestamp(),
-        }, SetOptions(merge: true));
+    // This should never be reached, but just in case
+    throw Exception('Failed to complete level after $maxRetries attempts');
+  }
 
-        // Update user's aggregate XP and badges
-        int totalXp = 0;
-        List<dynamic> badges = [];
-        String username = '';
-        if (userSnap.exists) {
-          final u = userSnap.data() as Map<String, dynamic>;
-          totalXp = (u['xp'] ?? 0) as int;
-          badges = (u['badges'] ?? []) as List<dynamic>;
-          username = (u['username'] ?? '') as String;
-        }
-        totalXp += xpPerLevel;
+  /// Fallback method to complete level without transaction
+  Future<Map<String, dynamic>> _completeLevelWithoutTransaction({
+    required String userId,
+    required String languageName,
+    required int completedLevelIndex,
+    required int totalLevels,
+    int xpPerLevel = 100,
+  }) async {
+    try {
+      final userRef = _firestore.collection('users').doc(userId);
+      final progressRef = userRef.collection('progress').doc(languageName);
 
-        // Award badge on course completion if not already present
+      // Get current progress
+      final progressSnap = await progressRef.get();
+      int currentCompletedLevels = 0;
+      int languageXp = 0;
+      bool courseCompleted = false;
+
+      // Initialize user variables early
+      int totalXp = 0;
+      List<dynamic> badges = [];
+      String username = '';
+
+      if (progressSnap.exists) {
+        final data = progressSnap.data() as Map<String, dynamic>;
+        currentCompletedLevels = (data['completedLevels'] ?? 0) as int;
+        languageXp = (data['xp'] ?? 0) as int;
+        courseCompleted = (data['completed'] ?? false) as bool;
+      }
+
+      // Only allow marking the next level in order
+      print(
+        '🔍 Level validation (fallback): completedLevelIndex=$completedLevelIndex, currentCompletedLevels=$currentCompletedLevels, courseCompleted=$courseCompleted',
+      );
+      if (completedLevelIndex != currentCompletedLevels) {
+        print('❌ Level validation failed (fallback) - returning existing data');
+        // Still check for badge if course is completed
         if (courseCompleted) {
+          print('🎉 Course already completed - checking for badge (fallback)');
           final badgeId = 'completed_$languageName';
           final hasBadge = badges.any(
             (b) => (b is Map<String, dynamic>) && b['id'] == badgeId,
           );
           if (!hasBadge) {
+            print('🏆 Adding missing badge: $badgeId (fallback)');
             badges = List<dynamic>.from(badges)
               ..add({
                 'id': badgeId,
                 'title': 'Completed $languageName',
                 'awardedAt': FieldValue.serverTimestamp(),
               });
+
+            // Update user document with badge
+            await userRef.set({
+              'xp': totalXp,
+              'badges': badges,
+              'username': username,
+              'updatedAt': FieldValue.serverTimestamp(),
+            }, SetOptions(merge: true));
           }
         }
-
-        txn.set(userRef, {
-          'xp': totalXp,
-          'badges': badges,
-          'username': username,
-          'updatedAt': FieldValue.serverTimestamp(),
-        }, SetOptions(merge: true));
-
         return {
           'completedLevels': currentCompletedLevels,
           'xp': languageXp,
           'completed': courseCompleted,
-          'totalXp': totalXp,
         };
-      });
+      }
+      print('✅ Level validation passed (fallback)');
+
+      currentCompletedLevels += 1;
+      languageXp += xpPerLevel;
+      courseCompleted = currentCompletedLevels >= totalLevels;
+
+      // Update progress
+      await progressRef.set({
+        'language': languageName,
+        'completedLevels': currentCompletedLevels,
+        'xp': languageXp,
+        'completed': courseCompleted,
+        'updatedAt': FieldValue.serverTimestamp(),
+      }, SetOptions(merge: true));
+
+      // Update user's aggregate XP and badges
+      final userSnap = await userRef.get();
+
+      if (userSnap.exists) {
+        final u = userSnap.data() as Map<String, dynamic>;
+        totalXp = (u['xp'] ?? 0) as int;
+        badges = (u['badges'] ?? []) as List<dynamic>;
+        username = (u['username'] ?? '') as String;
+      } else {
+        // If user document doesn't exist, create it with basic structure
+        username = 'User'; // Default username
+      }
+
+      totalXp += xpPerLevel;
+
+      // Award badge on course completion if not already present
+      if (courseCompleted) {
+        print(
+          '🎉 Course completed! Awarding badge for $languageName (fallback method)',
+        );
+        print(
+          'Current completed levels: $currentCompletedLevels, Total levels: $totalLevels',
+        );
+        final badgeId = 'completed_$languageName';
+        final hasBadge = badges.any(
+          (b) => (b is Map<String, dynamic>) && b['id'] == badgeId,
+        );
+        if (!hasBadge) {
+          print('🏆 Adding new badge: $badgeId (fallback method)');
+          badges = List<dynamic>.from(badges)
+            ..add({
+              'id': badgeId,
+              'title': 'Completed $languageName',
+              'awardedAt': FieldValue.serverTimestamp(),
+            });
+        } else {
+          print('⚠️ Badge already exists: $badgeId (fallback method)');
+        }
+      } else {
+        print(
+          '❌ Course not completed yet. Levels: $currentCompletedLevels/$totalLevels (fallback method)',
+        );
+      }
+
+      await userRef.set({
+        'xp': totalXp,
+        'badges': badges,
+        'username': username,
+        'updatedAt': FieldValue.serverTimestamp(),
+      }, SetOptions(merge: true));
+
+      return {
+        'completedLevels': currentCompletedLevels,
+        'xp': languageXp,
+        'completed': courseCompleted,
+        'totalXp': totalXp,
+      };
     } catch (e) {
-      print('ProgressService.completeLevel error: $e');
-      print(
-        'UserId: $userId, Language: $languageName, Level: $completedLevelIndex',
-      );
-      rethrow; // Re-throw to let the caller handle it
+      print('ProgressService._completeLevelWithoutTransaction error: $e');
+      print('Error type: ${e.runtimeType}');
+      print('Error details: ${e.toString()}');
+
+      // Return a safe fallback response instead of rethrowing
+      return {'completedLevels': 0, 'xp': 0, 'completed': false, 'totalXp': 0};
     }
   }
 

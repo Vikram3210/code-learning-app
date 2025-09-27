@@ -9,23 +9,23 @@ plugins {
 
 android {
     namespace = "com.example.code_learning_app"
-    compileSdk = 35 // Replace with latest compile SDK version
+    compileSdk = 36 // Replace with latest compile SDK version
 
     ndkVersion = "27.0.12077973" // Replace with your installed NDK version
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "1.8"
     }
 
     defaultConfig {
         applicationId = "com.example.code_learning_app"
-        minSdk = 21
-        targetSdk = 35
+        minSdk = flutter.minSdkVersion
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
     }
