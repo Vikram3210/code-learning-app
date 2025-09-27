@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'verify_email_screen.dart';
+import '../services/user_service.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -35,6 +36,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
         email: _emailController.text.trim(),
         password: _passwordController.text.trim(),
       );
+
+      // Ensure Firestore profile immediately
+      final u = userCredential.user;
+      if (u != null) {
+        await UserService().ensureUserDocument(
+          u,
+          username: _usernameController.text.trim(),
+        );
+      }
 
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(

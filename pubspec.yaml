@@ -72,6 +72,7 @@ flutter:
   assets:
     - assets/logo.jpg
     - assets/google_logo.png
+    - assets/questions.json
 
 
 

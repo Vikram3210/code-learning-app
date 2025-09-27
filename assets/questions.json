@@ -1,0 +1,4611 @@
+{
+  "questions": [
+    {
+      "language": "Python",
+      "difficulty": 1,
+      "question": "What symbol is used to denote a single-line comment in Python?",
+      "options": [
+        "//",
+        "#",
+        "/* */",
+        ""
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Comments",
+        "Basic Syntax"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 1,
+      "question": "Which function is used to display output to the console?",
+      "options": [
+        "output()",
+        "write()",
+        "print()",
+        "display()"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Hello World",
+        "Basic Syntax"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 1,
+      "question": "Which data type would be used to store a whole number like 42?",
+      "options": [
+        "float",
+        "bool",
+        "int",
+        "str"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Variables & Data Types"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 1,
+      "question": "Which of the following is an invalid Python variable name?",
+      "options": [
+        "my_variable_1",
+        "MyVariable",
+        "_myVariable",
+        "1variable"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Variables & Data Types"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 1,
+      "question": "In Python, which characters must enclose a string literal?",
+      "options": [
+        "Parentheses `()`",
+        "Square brackets `[]`",
+        "Double or single quotes `\"\"` or `''`",
+        "Curly braces `{}`"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Variables & Data Types",
+        "Basic Syntax"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 1,
+      "question": "The process of creating a simple program to confirm your development environment works is often called:",
+      "options": [
+        "Debugging",
+        "Hello World",
+        "Compilation",
+        "Integration"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Hello World"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 1,
+      "question": "What is the result of the expression `5 + 2 * 3` in Python?",
+      "options": [
+        "21",
+        "11",
+        "17",
+        "13"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Basic Syntax"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 1,
+      "question": "What is the Boolean data type used to represent?",
+      "options": [
+        "Text and numbers",
+        "Decimals and fractions",
+        "True or False values",
+        "Lists of items"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Variables & Data Types"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 1,
+      "question": "What does a line starting with three single or double quotes (`'''` or `\"\"\"`) often indicate in Python?",
+      "options": [
+        "A syntax error",
+        "A multi-line string or docstring",
+        "An inline comment",
+        "A variable declaration"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Comments"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 1,
+      "question": "Which of these operators is used for checking if two values are equal?",
+      "options": [
+        "=",
+        "==",
+        "===",
+        "equal"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Basic Syntax"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 2,
+      "question": "What keyword is used to execute a block of code only if a specified condition is true?",
+      "options": [
+        "then",
+        "if",
+        "check",
+        "condition"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "If/Else Statements"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 2,
+      "question": "Which type of loop is typically used when you know exactly how many times you want to iterate?",
+      "options": [
+        "while loop",
+        "do-while loop",
+        "for loop",
+        "if-else block"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Loops (For/While)"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 2,
+      "question": "In Python, what is the keyword for the alternative branch when the initial `if` condition is false?",
+      "options": [
+        "otherwise",
+        "else",
+        "elif",
+        "except"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "If/Else Statements"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 2,
+      "question": "What is the purpose of the `range(5)` function in a Python `for` loop?",
+      "options": [
+        "To start the loop at index 5",
+        "To stop the loop immediately",
+        "To iterate 5 times (from 0 to 4)",
+        "To create a list of five random numbers"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Loops (For/While)"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 2,
+      "question": "The `and` and `or` keywords are examples of what type of operators?",
+      "options": [
+        "Arithmetic Operators",
+        "Comparison Operators",
+        "Logical (Boolean) Operators",
+        "Assignment Operators"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Boolean Logic"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 2,
+      "question": "Python does not have a native 'switch case' statement. What is the common idiomatic structure used as an alternative?",
+      "options": [
+        "A long `try...except` block",
+        "A series of nested `for` loops",
+        "Using a dictionary to map cases to functions/actions",
+        "The `select` statement"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Switch Cases"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 2,
+      "question": "What does the `not` operator do in Boolean logic?",
+      "options": [
+        "It performs a logical AND operation.",
+        "It performs a logical OR operation.",
+        "It negates a Boolean value (True becomes False, and vice-versa).",
+        "It checks for inequality."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Boolean Logic"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 2,
+      "question": "Which statement would you use to exit the current loop iteration and move to the next one?",
+      "options": [
+        "break",
+        "return",
+        "continue",
+        "stop"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Loops (For/While)"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 2,
+      "question": "If a variable `x` is `5`, what is the result of the condition `x > 10 or x == 5`?",
+      "options": [
+        "False",
+        "True",
+        "5",
+        "Error"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Boolean Logic"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 2,
+      "question": "Which Python keyword is used for an 'else if' block in an `if` statement chain?",
+      "options": [
+        "else if",
+        "elif",
+        "elseif",
+        "or if"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "If/Else Statements"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 3,
+      "question": "What keyword is used to define a function in Python?",
+      "options": [
+        "function",
+        "func",
+        "def",
+        "define"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Function Definition"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 3,
+      "question": "A variable defined inside a function is said to have what type of scope?",
+      "options": [
+        "Global scope",
+        "Built-in scope",
+        "Local scope",
+        "Module scope"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Scope"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 3,
+      "question": "What are the values passed to a function when it is called, corresponding to the parameters in the definition?",
+      "options": [
+        "Return values",
+        "Arguments",
+        "Signatures",
+        "Variables"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Parameters & Arguments"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 3,
+      "question": "What is the keyword used to send a value back from a function to the caller?",
+      "options": [
+        "send",
+        "output",
+        "return",
+        "yield"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Return Values"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 3,
+      "question": "What happens if a function does not explicitly use the `return` keyword?",
+      "options": [
+        "It returns the last calculated value.",
+        "It returns `None`.",
+        "It causes a runtime error.",
+        "It returns an empty string."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Return Values"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 3,
+      "question": "What are the named placeholders in a function definition called?",
+      "options": [
+        "Parameters",
+        "Arguments",
+        "Variables",
+        "Data fields"
+      ],
+      "correctIndex": 0,
+      "topics": [
+        "Parameters & Arguments"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 3,
+      "question": "In Python, which statement should be used inside a function to modify a variable defined outside the function (in global scope)?",
+      "options": [
+        "local",
+        "global",
+        "var",
+        "extern"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Scope"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 3,
+      "question": "What is the primary benefit of defining a function?",
+      "options": [
+        "Faster variable assignment",
+        "Creating custom data types",
+        "Code reuse and organization",
+        "Preventing recursion"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Function Definition"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 3,
+      "question": "If a function is defined with two parameters, but is called with only one argument, what will happen?",
+      "options": [
+        "A default value will be assigned.",
+        "A Type Error will occur.",
+        "The missing parameter will be set to `None`.",
+        "The program will continue without error."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Parameters & Arguments"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 3,
+      "question": "In the function `def greet(name='World'):`, what is `'World'` an example of?",
+      "options": [
+        "A required argument",
+        "A keyword argument",
+        "A default parameter value",
+        "A return value"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Parameters & Arguments"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 4,
+      "question": "Which built-in data structure in Python is mutable, ordered, and allows duplicate elements?",
+      "options": [
+        "Tuple",
+        "Set",
+        "Array/List",
+        "Dictionary/Map"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Arrays/Lists"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 4,
+      "question": "How do you access the value associated with a key in a Python dictionary called `data`?",
+      "options": [
+        "data.key",
+        "data->key",
+        "data[key]",
+        "data(key)"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Dictionaries/Maps"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 4,
+      "question": "What is the key characteristic of a Python `set` that distinguishes it from a `list`?",
+      "options": [
+        "Sets are ordered.",
+        "Sets are immutable.",
+        "Sets can only store integers.",
+        "Sets only store unique elements (no duplicates)."
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Sets"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 4,
+      "question": "The process of repeatedly executing a block of code for each item in a collection is called:",
+      "options": [
+        "Recursion",
+        "Slicing",
+        "Iteration",
+        "Mapping"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Iteration"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 4,
+      "question": "Which method is commonly used to add a new element to the end of a Python list?",
+      "options": [
+        "insert()",
+        "add()",
+        "append()",
+        "push()"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Arrays/Lists"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 4,
+      "question": "What is the term for extracting a sub-sequence of elements from a list or string using colon notation (e.g., `list[1:4]`)?",
+      "options": [
+        "Indexing",
+        "Slicing",
+        "Dicing",
+        "Traversing"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Arrays/Lists"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 4,
+      "question": "What is the difference between Python's `list` and `tuple` data types?",
+      "options": [
+        "Lists are immutable, tuples are mutable.",
+        "Lists can hold different types, tuples can't.",
+        "Lists are mutable, tuples are immutable.",
+        "Lists are unordered, tuples are ordered."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Arrays/Lists"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 4,
+      "question": "Which of the following is *not* a correct way to iterate over the keys of a dictionary `d`?",
+      "options": [
+        "for key in d:",
+        "for key in d.keys():",
+        "for key, value in d.items():",
+        "for key in d.values():"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Dictionaries/Maps",
+        "Iteration"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 4,
+      "question": "What is a major advantage of using a `set` over a `list` when checking for element presence?",
+      "options": [
+        "Sets are smaller in memory.",
+        "Set lookups are generally faster (O(1)).",
+        "Sets preserve insertion order.",
+        "Sets are easier to iterate over."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Sets"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 4,
+      "question": "What built-in function is often used in combination with lists for iteration when you need both the index and the value of an item?",
+      "options": [
+        "zip()",
+        "enumerate()",
+        "map()",
+        "filter()"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Iteration"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 5,
+      "question": "What is the keyword used to define a class in Python?",
+      "options": [
+        "Class",
+        "define_class",
+        "object",
+        "class"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Classes & Objects"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 5,
+      "question": "Which method is the constructor method in a Python class?",
+      "options": [
+        "__init__()",
+        "__new__()",
+        "constructor()",
+        "setup()"
+      ],
+      "correctIndex": 0,
+      "topics": [
+        "Classes & Objects"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 5,
+      "question": "What is the first parameter of any instance method in a Python class, by convention?",
+      "options": [
+        "this",
+        "class",
+        "self",
+        "instance"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Classes & Objects"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 5,
+      "question": "The mechanism of bundling data (attributes) and the methods (functions) that operate on that data into a single unit is called:",
+      "options": [
+        "Inheritance",
+        "Encapsulation",
+        "Polymorphism",
+        "Abstraction"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Encapsulation"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 5,
+      "question": "What is the term for a new class deriving properties and behavior from an existing class?",
+      "options": [
+        "Composition",
+        "Abstraction",
+        "Inheritance",
+        "Overloading"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Inheritance"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 5,
+      "question": "Which OOP principle allows objects of different classes to respond to the same method call in a way specific to their own class?",
+      "options": [
+        "Encapsulation",
+        "Polymorphism",
+        "Inheritance",
+        "Association"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Polymorphism"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 5,
+      "question": "If Class `B` inherits from Class `A`, Class `B` is referred to as the:",
+      "options": [
+        "Parent class",
+        "Superclass",
+        "Base class",
+        "Child/Derived class"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Inheritance"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 5,
+      "question": "In Python, achieving privacy by convention (e.g., using a single or double underscore prefix on an attribute) is a form of:",
+      "options": [
+        "Polymorphism",
+        "Encapsulation",
+        "Inheritance",
+        "Overriding"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Encapsulation"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 5,
+      "question": "What is 'Method Overriding' an example of?",
+      "options": [
+        "Method Hiding",
+        "Inheritance",
+        "Polymorphism",
+        "Encapsulation"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Polymorphism"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 5,
+      "question": "An instance of a class, created using the class name followed by parentheses, is known as a(n):",
+      "options": [
+        "Template",
+        "Object",
+        "Module",
+        "Blueprint"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Classes & Objects"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 6,
+      "question": "What block of code is used to enclose the code that might cause an error and is followed by the error-handling code?",
+      "options": [
+        "try",
+        "catch",
+        "assert",
+        "raise"
+      ],
+      "correctIndex": 0,
+      "topics": [
+        "Error Handling"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 6,
+      "question": "Which keyword is used to gracefully handle an exception in Python?",
+      "options": [
+        "throw",
+        "catch",
+        "handle",
+        "except"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Error Handling"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 6,
+      "question": "The code block that executes *regardless* of whether an exception occurred in the `try` block is:",
+      "options": [
+        "except",
+        "else",
+        "finally",
+        "always"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Error Handling"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 6,
+      "question": "Which built-in function is used to open a file in Python for I/O operations?",
+      "options": [
+        "read_file()",
+        "open()",
+        "load_file()",
+        "file_access()"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "File I/O"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 6,
+      "question": "What is the recommended approach to ensure a file is automatically closed after its use, even if errors occur?",
+      "options": [
+        "Using a `finally` block with `file.close()`",
+        "Using the `with open(...) as file:` statement",
+        "Relying on garbage collection",
+        "Calling `sys.exit()` after operation"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "File I/O"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 6,
+      "question": "What is a directory containing Python files with an `__init__.py` file called?",
+      "options": [
+        "A script",
+        "A module",
+        "A library",
+        "A package"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Modules/Packages"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 6,
+      "question": "What is the standard library module in Python for writing unit tests?",
+      "options": [
+        "pytest",
+        "doctest",
+        "unittest",
+        "nose"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Testing"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 6,
+      "question": "Which command is used to bring functionality from another module into the current Python script?",
+      "options": [
+        "include",
+        "get",
+        "load",
+        "import"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Modules/Packages"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 6,
+      "question": "When opening a file, what mode is used to write to the file, creating it if it doesn't exist, and overwriting its content if it does?",
+      "options": [
+        "a (append)",
+        "r (read)",
+        "w (write)",
+        "x (exclusive creation)"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "File I/O"
+      ]
+    },
+    {
+      "language": "Python",
+      "difficulty": 6,
+      "question": "The assertion method in Python's `unittest` that checks if two values are equal is typically named:",
+      "options": [
+        "assertTrue()",
+        "assertEqual()",
+        "isEqual()",
+        "assertCheck()"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Testing"
+      ]
+    },
+    {
+      "language": "Java",
+      "difficulty": 1,
+      "question": "The entry point for any standalone Java application is the:",
+      "options": [
+        "class constructor",
+        "public static void main(String[] args) method",
+        "System.out.println() statement",
+        "main class declaration"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Hello World",
+        "Basic Syntax"
+      ]
+    },
+    {
+      "language": "Java",
+      "difficulty": 1,
+      "question": "Which of the following is a primitive data type in Java?",
+      "options": [
+        "String",
+        "Array",
+        "int",
+        "Object"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Variables & Data Types"
+      ]
+    },
+    {
+      "language": "Java",
+      "difficulty": 1,
+      "question": "All Java statements must end with which character?",
+      "options": [
+        "Colon (`:`)",
+        "Comma (`,`)",
+        "Semicolon (`;`)",
+        "Period (`.`)"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Basic Syntax"
+      ]
+    },
+    {
+      "language": "Java",
+      "difficulty": 1,
+      "question": "Which method is used to print a line of text to the console in Java?",
+      "options": [
+        "Console.writeLine()",
+        "System.out.print()",
+        "System.out.println()",
+        "Print.console()"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Hello World",
+        "Basic Syntax"
+      ]
+    },
+    {
+      "language": "Java",
+      "difficulty": 1,
+      "question": "What is the output of the following Java declaration: `int count = 0;`?",
+      "options": [
+        "A float variable named `count` is created.",
+        "An integer variable named `count` is initialized to 0.",
+        "A string variable named `count` is created.",
+        "This is an invalid declaration."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Variables & Data Types"
+      ]
+    },
+    {
+      "language": "Java",
+      "difficulty": 1,
+      "question": "Which symbol is used for a single-line comment in Java?",
+      "options": [
+        "#",
+        "//",
+        "/*",
+        ""
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Comments"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 1,
+      "question": "Which tag pair is used to contain metadata and links to external resources (like CSS) for an HTML document?",
+      "options": [
+        "<body></body>",
+        "<footer></footer>",
+        "<head></head>",
+        "<header></header>"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Basic Tags (html, head, body)"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 1,
+      "question": "What is an HTML attribute?",
+      "options": [
+        "The content inside an element.",
+        "A piece of information that modifies the behavior or appearance of an element.",
+        "A type of CSS selector.",
+        "The name of a closing tag."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Attributes"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 1,
+      "question": "Which tag represents a self-closing element (or void element) that does not require a closing tag?",
+      "options": [
+        "`<p>` (Paragraph)",
+        "<div> (Division)",
+        "<img> (Image)",
+        "<a> (Anchor)"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Basic Tags (html, head, body)"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 1,
+      "question": "What defines the structure and organization of an HTML document?",
+      "options": [
+        "CSS",
+        "JavaScript",
+        "Elements & Structure",
+        "Server-side scripting"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Elements & Structure"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 1,
+      "question": "Which attribute is used to provide a tooltip or extra information about an element when the user hovers over it?",
+      "options": [
+        "alt",
+        "src",
+        "title",
+        "link"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Attributes"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 2,
+      "question": "Which is the most important heading tag for the main title of a document?",
+      "options": [
+        "<h2>",
+        "<h1>",
+        "<h3>",
+        "<h4>"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Text & Headings"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 2,
+      "question": "What tag is used to create a hyperlink to another web page?",
+      "options": [
+        "<link>",
+        "<nav>",
+        "<a>",
+        "<href>"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Links & Images"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 2,
+      "question": "The attribute `alt` on an `<img>` tag is primarily important for:",
+      "options": [
+        "Search Engine Optimization (SEO)",
+        "Defining the image size",
+        "Specifying the image file type",
+        "Accessibility (screen readers) and when the image fails to load"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Links & Images"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 2,
+      "question": "Which tag is used to define an *unordered* list?",
+      "options": [
+        "<ol>",
+        "<li>",
+        "<list>",
+        "<ul>"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Lists & Tables"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 2,
+      "question": "What is the purpose of the `<tr>` tag in a table?",
+      "options": [
+        "To define a table header cell.",
+        "To define a column.",
+        "To define a table row.",
+        "To define the entire table."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Lists & Tables"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 2,
+      "question": "Which HTML5 tag is used to embed video content directly into a web page?",
+      "options": [
+        "<media>",
+        "<embed>",
+        "<video>",
+        "<source>"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Media (audio, video)"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 2,
+      "question": "To open a hyperlink in a new browser tab, which attribute and value should be used on the `<a>` tag?",
+      "options": [
+        "target=\"_self\"",
+        "target=\"_blank\"",
+        "href=\"new\"",
+        "link=\"new\""
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Links & Images"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 2,
+      "question": "Which tag is used to define a list item within an ordered or unordered list?",
+      "options": [
+        "<item>",
+        "<list-item>",
+        "<li>",
+        "<ol-li>"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Lists & Tables"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 2,
+      "question": "Which tag is used to define a *data cell* in an HTML table?",
+      "options": [
+        "<th>",
+        "<td>",
+        "<tr>",
+        "<caption>"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Lists & Tables"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 2,
+      "question": "What attribute should be added to an `<audio>` tag to allow the user to play, pause, and control the volume?",
+      "options": [
+        "autoplay",
+        "controls",
+        "source",
+        "loop"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Media (audio, video)"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 3,
+      "question": "Which semantic element should be used to contain the main, unique content of a document?",
+      "options": [
+        "<div>",
+        "<section>",
+        "<main>",
+        "<article>"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Semantic Elements (header, main, article, footer)"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 3,
+      "question": "What is the primary benefit of using semantic HTML elements (like `<article>`, `<nav>`, `<aside>`)?",
+      "options": [
+        "They are easier to style with CSS.",
+        "They make the page load faster.",
+        "They provide meaning to content, improving accessibility and SEO.",
+        "They are only used for mobile development."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Semantic Elements (header, main, article, footer)"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 3,
+      "question": "Which tag is used to define a distinct, self-contained piece of content, such as a blog post or news story?",
+      "options": [
+        "<section>",
+        "<main>",
+        "<div>",
+        "<article>"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Semantic Elements (header, main, article, footer)"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 3,
+      "question": "Which tag is typically used to contain navigation links for a website?",
+      "options": [
+        "<footer>",
+        "<nav>",
+        "<ul>",
+        "<links>"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Sections & Headings"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 3,
+      "question": "What is the purpose of the `<meta charset=\"utf-8\">` tag in the `<head>`?",
+      "options": [
+        "To define the viewport.",
+        "To set the character encoding for the document.",
+        "To link to a font file.",
+        "To provide a page description."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Metadata & Head"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 3,
+      "question": "Skipping heading levels (e.g., jumping from `<h1>` to `<h3>`) is a common mistake that harms which aspect of web development?",
+      "options": [
+        "CSS file size",
+        "Accessibility Basics",
+        "Page performance",
+        "JavaScript execution speed"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Accessibility Basics"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 3,
+      "question": "The `<header>` semantic element is best used to contain:",
+      "options": [
+        "Site-wide contact information.",
+        "Introductory content for a section or page.",
+        "The primary navigation menu.",
+        "Copyright notices."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Semantic Elements (header, main, article, footer)"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 3,
+      "question": "The `<link rel=\"stylesheet\" href=\"styles.css\">` tag belongs in which section of the HTML document?",
+      "options": [
+        "<body>",
+        "<header>",
+        "<head>",
+        "<footer>"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Metadata & Head"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 3,
+      "question": "What is one way to improve accessibility for users who use screen readers when dealing with link text?",
+      "options": [
+        "Using generic text like 'Click Here'.",
+        "Ensuring the link text clearly describes the link's destination/purpose.",
+        "Setting the link color to blue.",
+        "Removing the `href` attribute."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Accessibility Basics"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 3,
+      "question": "Which element is designed to contain supplementary content, often presented as a sidebar?",
+      "options": [
+        "<details>",
+        "<aside>",
+        "<section>",
+        "<blockquote>"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Semantic Elements (header, main, article, footer)"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 4,
+      "question": "What tag is used to create a container for a set of form controls and structure a form submission?",
+      "options": [
+        "<input>",
+        "<button>",
+        "<form>",
+        "<fieldset>"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Form Structure"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 4,
+      "question": "What is the purpose of the `for` attribute in a `<label>` tag?",
+      "options": [
+        "To specify the default value of an input.",
+        "To associate the label with an input field's `id` attribute.",
+        "To define the label's text style.",
+        "To make the input field mandatory."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Input Types & Labels"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 4,
+      "question": "Which HTML5 input `type` is specifically designed for collecting a user's email address and provides basic browser validation?",
+      "options": [
+        "type=\"text\"",
+        "type=\"url\"",
+        "type=\"email\"",
+        "type=\"submit\""
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Input Types & Labels"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 4,
+      "question": "Which attribute makes an input field mandatory to fill out before a form can be submitted?",
+      "options": [
+        "must",
+        "mandatory",
+        "required",
+        "validate"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Validation"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 4,
+      "question": "The `method` attribute on the `<form>` tag is used to specify:",
+      "options": [
+        "The type of input fields in the form.",
+        "The HTTP method (e.g., GET or POST) to submit the form data.",
+        "The JavaScript function to validate the form.",
+        "The number of fields in the form."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Form Structure"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 4,
+      "question": "What HTML element is used to embed another HTML document (or a different resource) within the current document?",
+      "options": [
+        "<embed>",
+        "<object>",
+        "<iframe>",
+        "<include>"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "iframes & Embeds"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 4,
+      "question": "Which input type is best suited for collecting a user's password securely?",
+      "options": [
+        "type=\"text\"",
+        "type=\"password\"",
+        "type=\"hidden\"",
+        "type=\"security\""
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Input Types & Labels"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 4,
+      "question": "Which attribute can be used to define a regular expression pattern for client-side input validation?",
+      "options": [
+        "regex",
+        "validate",
+        "pattern",
+        "mask"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Validation"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 4,
+      "question": "What is the purpose of the `action` attribute in the `<form>` tag?",
+      "options": [
+        "To define the button text.",
+        "To specify the URL where the form data should be sent.",
+        "To enable client-side validation.",
+        "To determine the encoding type."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Form Structure"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 4,
+      "question": "What is the potential security concern when using `<iframe>` elements to embed content from unknown sources?",
+      "options": [
+        "It only affects page load speed.",
+        "It can cause CSS styling conflicts.",
+        "It poses a Cross-Site Scripting (XSS) risk if not handled securely.",
+        "It prevents JavaScript from running on the main page."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "iframes & Embeds"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 5,
+      "question": "What does the `lang` attribute on the `<html>` tag specify, which is important for both accessibility and SEO?",
+      "options": [
+        "The page load time.",
+        "The document structure version.",
+        "The primary language of the document content.",
+        "The character set."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "SEO Essentials",
+        "Internationalization"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 5,
+      "question": "What do ARIA attributes (e.g., `aria-label`, `aria-expanded`) primarily enhance?",
+      "options": [
+        "Cross-browser compatibility",
+        "Visual design and layout",
+        "Accessibility for screen reader users and assistive technologies",
+        "Page performance optimization"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Accessibility (ARIA)"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 5,
+      "question": "Using descriptive text in the `<title>` tag and `<meta name=\"description\">` tag are practices primarily aimed at improving:",
+      "options": [
+        "Internationalization",
+        "Accessibility",
+        "SEO Essentials",
+        "Form validation"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "SEO Essentials"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 5,
+      "question": "What is the role of the `role` attribute (part of ARIA) on a non-semantic element like a `<div>`?",
+      "options": [
+        "To apply CSS styles.",
+        "To define the element's behavior in JavaScript.",
+        "To communicate the purpose of the element to assistive technologies.",
+        "To specify the element's position on the page."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Accessibility (ARIA)"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 5,
+      "question": "Microdata or structured data (like Schema.org JSON-LD) embedded in HTML is primarily used to help:",
+      "options": [
+        "JavaScript frameworks organize data.",
+        "Search engines understand the content and context of the page (e.g., a recipe or a product).",
+        "Apply complex CSS animations.",
+        "Create responsive layouts."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Microdata / Structured Data"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 5,
+      "question": "Which attribute is essential for setting the document's language and is the starting point for internationalization?",
+      "options": [
+        "charset",
+        "dir",
+        "lang",
+        "locale"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Internationalization"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 5,
+      "question": "Which ARIA property is used to indicate that an element is currently expanded or collapsed (e.g., on an accordion menu)?",
+      "options": [
+        "aria-hidden",
+        "aria-controls",
+        "aria-label",
+        "aria-expanded"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Accessibility (ARIA)"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 5,
+      "question": "What is a 'Rich Snippet' in search results, and what technology helps create it?",
+      "options": [
+        "A faster-loading image, created with WebP.",
+        "A visually enhanced search result with specific data (like ratings), created with Structured Data.",
+        "An advertisement block, created with ARIA.",
+        "A responsive layout, created with Media Queries."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Microdata / Structured Data"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 5,
+      "question": "What does the `hreflang` attribute on a `<link>` tag indicate?",
+      "options": [
+        "The language of the current document.",
+        "The language of the linked document (for alternate language versions).",
+        "The direction of the text.",
+        "The element's accessibility role."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Internationalization"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 5,
+      "question": "What ARIA property should be used to provide a visible, descriptive label for an element that does not have an existing label (like a close button icon)?",
+      "options": [
+        "aria-labelledby",
+        "aria-description",
+        "aria-label",
+        "aria-hidden"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Accessibility (ARIA)"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 6,
+      "question": "To improve loading performance, where is the best place to place `<script>` tags for non-critical JavaScript files?",
+      "options": [
+        "In the `<head>` section.",
+        "Just before the closing `</body>` tag.",
+        "Inside a comment block.",
+        "In the middle of the document."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Performance & Loading"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 6,
+      "question": "What is the primary function of the HTML5 `<canvas>` API?",
+      "options": [
+        "To handle complex video playback.",
+        "To draw 2D graphics and animations dynamically using JavaScript.",
+        "To embed external websites.",
+        "To create custom form inputs."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "HTML5 APIs (Canvas, Media)"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 6,
+      "question": "What is the concept of building fully encapsulated, reusable custom elements with their own HTML, CSS, and behavior?",
+      "options": [
+        "Semantic HTML",
+        "Web Components Basics",
+        "Client-Side Rendering",
+        "Service Workers"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Web Components Basics"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 6,
+      "question": "What two attributes are commonly used on `<script>` tags to control script loading and prevent blocking of the page render?",
+      "options": [
+        "lazy and deferred",
+        "sync and async",
+        "defer and async",
+        "block and preload"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Performance & Loading"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 6,
+      "question": "What is a 'Custom Element' in the context of Web Components?",
+      "options": [
+        "A standard HTML tag with custom CSS.",
+        "A new HTML tag defined by the developer (e.g., `<my-widget>`).",
+        "A deprecated HTML4 tag.",
+        "A JavaScript class used for DOM manipulation."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Web Components Basics"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 6,
+      "question": "Progressive Enhancement is a strategy that focuses on starting with a baseline experience for all browsers and then adding advanced features:",
+      "options": [
+        "Only for mobile devices.",
+        "For modern browsers with more capabilities.",
+        "Only for users with high-speed internet.",
+        "Using Flash/ActionScript."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Progressive Enhancement"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 6,
+      "question": "What HTML5 API allows a web application to store structured data locally, often for offline use?",
+      "options": [
+        "Geolocation API",
+        "WebSockets API",
+        "Service Workers API",
+        "Web Storage API (localStorage, sessionStorage)"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "HTML5 APIs (Canvas, Media)"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 6,
+      "question": "What is the 'Shadow DOM' feature of Web Components primarily used for?",
+      "options": [
+        "Hiding content from search engines.",
+        "Applying styles to the main document.",
+        "Encapsulating an element's internal structure, style, and behavior.",
+        "Creating a virtual copy of the main DOM."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Web Components Basics"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 6,
+      "question": "The concept of 'Critical CSS' is related to improving:",
+      "options": [
+        "The First Contentful Paint (FCP) performance metric.",
+        "The total size of the HTML file.",
+        "The number of JavaScript functions.",
+        "Server response time."
+      ],
+      "correctIndex": 0,
+      "topics": [
+        "Performance & Loading"
+      ]
+    },
+    {
+      "language": "HTML",
+      "difficulty": 6,
+      "question": "The practice of 'Graceful Degradation' is the inverse of Progressive Enhancement. What does it involve?",
+      "options": [
+        "Building for modern browsers first and ensuring older browsers get a basic experience.",
+        "Building the simplest possible site for all browsers.",
+        "Using CSS Grid as the primary layout method.",
+        "Removing JavaScript from the application."
+      ],
+      "correctIndex": 0,
+      "topics": [
+        "Progressive Enhancement"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 1,
+      "question": "What is the correct syntax for a CSS rule?",
+      "options": [
+        "selector {property; value;}",
+        "property: value; selector;",
+        "selector {property: value;}",
+        "selector: property {value;}"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "CSS Syntax & Selectors"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 1,
+      "question": "Which selector targets all elements with the HTML attribute `id=\"main-nav\"`?",
+      "options": [
+        ".main-nav",
+        "#main-nav",
+        "main-nav",
+        "*main-nav"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "CSS Syntax & Selectors"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 1,
+      "question": "What is the recommended method for applying styles from an *external* CSS file to an HTML document?",
+      "options": [
+        "Using `<style>` tags in the body.",
+        "Using the `style` attribute on elements.",
+        "Using the `<link>` tag in the head.",
+        "Using the `@import` rule in a script."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Applying Styles"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 1,
+      "question": "Which CSS property is used to change the background color of an element?",
+      "options": [
+        "text-color",
+        "background-style",
+        "background-color",
+        "color"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Colors & Units"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 1,
+      "question": "What unit of measurement is typically used for defining the absolute size of a font or an element in print media or when absolute control is needed?",
+      "options": [
+        "em",
+        "rem",
+        "px (pixels)",
+        "%"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Colors & Units"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 1,
+      "question": "How do you define a multi-line comment in CSS?",
+      "options": [
+        "// comment",
+        "",
+        "/* comment */",
+        "### comment"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Comments"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 1,
+      "question": "Which type of selector targets all elements of a specific tag name (e.g., all `<p>` tags)?",
+      "options": [
+        "ID selector",
+        "Class selector",
+        "Universal selector",
+        "Type selector"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "CSS Syntax & Selectors"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 1,
+      "question": "What is the color code format that uses a `#` followed by six hexadecimal digits (e.g., `#FF0000`)?",
+      "options": [
+        "RGBa",
+        "HSL",
+        "Hexadecimal",
+        "Named color"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Colors & Units"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 1,
+      "question": "What method of applying styles has the highest precedence (specificity)?",
+      "options": [
+        "External stylesheet",
+        "Internal `<style>` tag",
+        "Inline styles (using the `style` attribute)",
+        "Browser default styles"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Applying Styles"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 1,
+      "question": "Which selector targets all elements with the class attribute `class=\"warning\"`?",
+      "options": [
+        "#warning",
+        "warning",
+        ".warning",
+        "*warning"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "CSS Syntax & Selectors"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 2,
+      "question": "Which of the following is *not* a part of the CSS Box Model?",
+      "options": [
+        "Padding",
+        "Margin",
+        "Outline",
+        "Content"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Box Model"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 2,
+      "question": "What does the `display: block;` property typically do to an element?",
+      "options": [
+        "It prevents line breaks before and after the element.",
+        "It takes up the full width available and forces a line break after it.",
+        "It positions the element relative to its parent.",
+        "It makes the element disappear."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Display & Positioning"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 2,
+      "question": "The `position: absolute;` property positions an element relative to its nearest ancestor that has a `position` value other than:",
+      "options": [
+        "relative",
+        "fixed",
+        "static",
+        "sticky"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Display & Positioning"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 2,
+      "question": "In the Box Model, the space *inside* the border, between the content and the border, is called:",
+      "options": [
+        "Margin",
+        "Padding",
+        "Content-box",
+        "Gutter"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Box Model"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 2,
+      "question": "What CSS property initializes a container as a flex container, enabling Flexbox properties on its children?",
+      "options": [
+        "flex-direction: row;",
+        "display: flex;",
+        "align-items: center;",
+        "flex-container: true;"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Flexbox Basics"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 2,
+      "question": "Which unit is relative to the font size of the *root* element (the `<html>` tag)?",
+      "options": [
+        "em",
+        "px",
+        "rem",
+        "vh"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Responsive Units"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 2,
+      "question": "In the Box Model, the space *outside* the border, separating the element from other elements, is called:",
+      "options": [
+        "Content",
+        "Padding",
+        "Border-box",
+        "Margin"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Box Model"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 2,
+      "question": "What does `display: none;` do to an element?",
+      "options": [
+        "It hides the element but reserves its space on the page.",
+        "It makes the element transparent.",
+        "It completely removes the element from the document flow and layout.",
+        "It makes the element available only to screen readers."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Display & Positioning"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 2,
+      "question": "Which Flexbox property is used to align flex items along the main axis of the container?",
+      "options": [
+        "align-items",
+        "align-content",
+        "justify-content",
+        "flex-flow"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Flexbox Basics"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 2,
+      "question": "What is the unit `vh` (viewport height) relative to?",
+      "options": [
+        "The height of the parent element.",
+        "The height of the browser's viewport.",
+        "The font size of the root element.",
+        "The width of the browser's viewport."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Responsive Units"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 3,
+      "question": "Which CSS property is used to apply a specific font family to text?",
+      "options": [
+        "text-style",
+        "font-name",
+        "font-family",
+        "font-type"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Fonts & Text"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 3,
+      "question": "What property controls the space between letters in a block of text?",
+      "options": [
+        "line-height",
+        "word-spacing",
+        "text-indent",
+        "letter-spacing"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Fonts & Text"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 3,
+      "question": "Which property can be used to display multiple background images on a single element?",
+      "options": [
+        "background-style",
+        "background-image",
+        "background-repeat",
+        "background-source"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Images & Backgrounds"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 3,
+      "question": "To use an external font file, you typically define it using which CSS rule?",
+      "options": [
+        "@import",
+        "@font-face",
+        "@link-font",
+        "@external-font"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Fonts & Text"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 3,
+      "question": "What is a common technique for using a single image file containing all website icons, which is then managed by adjusting the `background-position` property?",
+      "options": [
+        "Image Caching",
+        "SVG Optimization",
+        "CSS Sprites (or Image Sprites)",
+        "Base64 Encoding"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Icons"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 3,
+      "question": "What property determines how a background image should cover or contain its element's background area?",
+      "options": [
+        "background-size",
+        "background-clip",
+        "background-repeat",
+        "background-attachment"
+      ],
+      "correctIndex": 0,
+      "topics": [
+        "Images & Backgrounds"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 3,
+      "question": "Which property is the shorthand for `font-style`, `font-weight`, `font-size`, and `font-family`?",
+      "options": [
+        "text-font",
+        "typography",
+        "font-style-all",
+        "font"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Fonts & Text"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 3,
+      "question": "What property is essential for defining the duration of a basic CSS animation (without keyframes)?",
+      "options": [
+        "animation-name",
+        "animation-delay",
+        "transition-duration",
+        "animation-timing"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Basic Animations"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 3,
+      "question": "If you set `background-attachment: fixed;`, what does this do to the background image?",
+      "options": [
+        "It makes the image always appear in the center.",
+        "It prevents the image from repeating.",
+        "It fixes the image's position relative to the viewport, preventing it from scrolling.",
+        "It compresses the image for faster loading."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Images & Backgrounds"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 3,
+      "question": "What is the term for a simple CSS effect that changes a property's value over a specified period, typically triggered by a state change (like `:hover`)?",
+      "options": [
+        "Keyframes",
+        "Basic Animations",
+        "CSS Transitions",
+        "Transforms"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Basic Animations"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 4,
+      "question": "What is the property used to align flex items along the cross axis (perpendicular to the main axis)?",
+      "options": [
+        "justify-content",
+        "align-items",
+        "flex-flow",
+        "align-self"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Flexbox Advanced"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 4,
+      "question": "In CSS Grid, what property is used to explicitly define the number and size of columns in the grid container?",
+      "options": [
+        "grid-template-rows",
+        "grid-column-start",
+        "grid-gap",
+        "grid-template-columns"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "CSS Grid"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 4,
+      "question": "What is a 'media query' primarily used for?",
+      "options": [
+        "Applying styles based on the user's operating system.",
+        "Applying styles based on the characteristics of the display device (e.g., width or resolution).",
+        "Embedding video files.",
+        "Applying styles based on the time of day."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Media Queries"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 4,
+      "question": "What is the Flexbox property that allows flex items to wrap onto multiple lines when there isn't enough horizontal space?",
+      "options": [
+        "flex-direction",
+        "flex-wrap",
+        "flex-flow",
+        "overflow"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Flexbox Advanced"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 4,
+      "question": "In CSS Grid, the unit `fr` (fractional unit) is used to:",
+      "options": [
+        "Set a fixed pixel size.",
+        "Define a track as a fraction of the available space in the grid container.",
+        "Set the font size.",
+        "Define the maximum width of a column."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "CSS Grid"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 4,
+      "question": "A design philosophy that emphasizes adapting the layout and content of a website to the user's screen size is called:",
+      "options": [
+        "Fixed Layout Design",
+        "Responsive Web Design (RWD)",
+        "Mobile-First Design",
+        "Fluid Layout"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Responsive Patterns"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 4,
+      "question": "What is the primary difference between a Flexbox layout and a CSS Grid layout?",
+      "options": [
+        "Flexbox is 2D (rows *and* columns); Grid is 1D (rows *or* columns).",
+        "Flexbox is for layout; Grid is only for typography.",
+        "Flexbox is 1D (rows *or* columns); Grid is 2D (rows *and* columns).",
+        "Flexbox is deprecated; Grid is the modern standard."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Flexbox Advanced",
+        "CSS Grid"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 4,
+      "question": "What is the term for writing media queries to target devices from the smallest screen size up to larger ones?",
+      "options": [
+        "Desktop-First",
+        "Mobile-First",
+        "Min-Width Strategy",
+        "Max-Width Strategy"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Media Queries",
+        "Responsive Patterns"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 4,
+      "question": "What property, used on a grid item, allows it to span multiple grid tracks?",
+      "options": [
+        "grid-span",
+        "grid-size",
+        "grid-area",
+        "grid-column"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "CSS Grid"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 4,
+      "question": "Which Flexbox property allows a single item to override the default alignment set by `align-items`?",
+      "options": [
+        "flex-order",
+        "align-self",
+        "justify-self",
+        "flex-grow"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Flexbox Advanced"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 5,
+      "question": "CSS Custom Properties are defined using which prefix?",
+      "options": [
+        "$$",
+        "var-",
+        "--",
+        "@"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Variables & Custom Properties"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 5,
+      "question": "How do you use a CSS Custom Property named `--main-color` in a declaration?",
+      "options": [
+        "color: --main-color;",
+        "color: get(--main-color);",
+        "color: var(--main-color);",
+        "color: $main-color;"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Variables & Custom Properties"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 5,
+      "question": "What does the 'B' stand for in the BEM (Block, Element, Modifier) methodology?",
+      "options": [
+        "Base",
+        "Block",
+        "Body",
+        "Behavior"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "BEM & Organization"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 5,
+      "question": "Which of the following selectors has the highest specificity?",
+      "options": [
+        "p",
+        ".class-name",
+        "#id-name",
+        "div p"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Cascade & Specificity"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 5,
+      "question": "The order in which stylesheets are linked to the HTML document is a key factor in determining which styles apply. This is an example of:",
+      "options": [
+        "Selector Nesting",
+        "Specificity",
+        "The Cascade",
+        "The Box Model"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Cascade & Specificity"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 5,
+      "question": "In the BEM methodology, how would you represent a *modifier* for a button block (e.g., a button with a large size)?",
+      "options": [
+        ".button_large",
+        ".button-large",
+        ".button--large",
+        "button[size=\"large\"]"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "BEM & Organization"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 5,
+      "question": "What is the purpose of the `outline` property when related to accessibility styling?",
+      "options": [
+        "To define the element's border.",
+        "To improve font legibility.",
+        "To provide a visual focus indicator for keyboard users.",
+        "To hide the element from sight."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Accessibility Styling"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 5,
+      "question": "When styling for accessibility, which pseudo-class should be used to style an element when it has keyboard focus?",
+      "options": [
+        ":hover",
+        ":active",
+        ":focus",
+        ":visited"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Accessibility Styling"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 5,
+      "question": "If two selectors have the same specificity, which one takes precedence?",
+      "options": [
+        "The one with more lines of code.",
+        "The one that appears later in the stylesheet.",
+        "The one that appears earlier in the stylesheet.",
+        "The one with fewer elements."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Cascade & Specificity"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 5,
+      "question": "What is a main advantage of using CSS Custom Properties (Variables)?",
+      "options": [
+        "They are compiled into binary code.",
+        "They can only be used on the root element.",
+        "They allow central definition and dynamic change of values across the stylesheet.",
+        "They are private and cannot be inspected."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Variables & Custom Properties"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 6,
+      "question": "What property is used to define the properties that should smoothly change over a specified duration in a CSS Transition?",
+      "options": [
+        "transition-duration",
+        "transition-timing-function",
+        "transition-delay",
+        "transition-property"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Transitions & Keyframes"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 6,
+      "question": "What is the name of the CSS rule used to define the intermediate steps (or checkpoints) of a multi-step animation?",
+      "options": [
+        "@animation-points",
+        "@keyframes",
+        "@steps",
+        "@animate"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Transitions & Keyframes"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 6,
+      "question": "Which `transform` function is used to change the size of an element?",
+      "options": [
+        "rotate()",
+        "translate()",
+        "scale()",
+        "skew()"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Transforms"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 6,
+      "question": "The `translate3d()` and `scaleZ()` functions are part of which type of transformation?",
+      "options": [
+        "2D Transforms",
+        "Matrix Transforms",
+        "3D Transforms",
+        "Vector Transforms"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Transforms"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 6,
+      "question": "What is the primary benefit of animating properties like `transform` and `opacity` over properties like `width` and `height`?",
+      "options": [
+        "They are easier to write.",
+        "They are hardware-accelerated and cause less layout reflows, improving performance.",
+        "They only work on mobile devices.",
+        "They use less memory."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Performance"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 6,
+      "question": "What are 'Container Queries' (a Modern Feature) designed to do?",
+      "options": [
+        "Query the user's internet connection speed.",
+        "Apply styles based on the size of the *parent container* instead of the viewport.",
+        "Query the available space in the browser window.",
+        "Apply styles based on the number of elements in a container."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Modern Features (container queries)"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 6,
+      "question": "Which animation property defines how many times an animation should run?",
+      "options": [
+        "animation-play-state",
+        "animation-iteration-count",
+        "animation-fill-mode",
+        "animation-name"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Transitions & Keyframes"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 6,
+      "question": "What is the `will-change` CSS property used for?",
+      "options": [
+        "To define a variable.",
+        "To warn the browser about which properties are expected to change to optimize performance.",
+        "To prevent layout changes.",
+        "To reset all CSS properties."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Performance"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 6,
+      "question": "The `backdrop-filter` property is an example of a modern feature that allows:",
+      "options": [
+        "Creating a custom scrollbar.",
+        "Applying graphic effects to the area *behind* an element.",
+        "Disabling user interaction.",
+        "Defining a custom color palette."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Modern Features (container queries)"
+      ]
+    },
+    {
+      "language": "CSS",
+      "difficulty": 6,
+      "question": "What `transform` function is used to move an element from its original position?",
+      "options": [
+        "scale()",
+        "rotate()",
+        "translate()",
+        "matrix()"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Transforms"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 1,
+      "question": "Which keyword is used to declare a variable whose value should *not* be re-assigned after initialization?",
+      "options": [
+        "var",
+        "let",
+        "const",
+        "global"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Variables (let/const)"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 1,
+      "question": "Which of these is *not* a primitive data type in JavaScript?",
+      "options": [
+        "number",
+        "boolean",
+        "object",
+        "string"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Data Types"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 1,
+      "question": "What is the correct way to output a message to the browser's developer console?",
+      "options": [
+        "print(\"Hello\");",
+        "alert(\"Hello\");",
+        "console.log(\"Hello\");",
+        "System.out.println(\"Hello\");"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Console & Comments"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 1,
+      "question": "What does the `+` operator do when used with two strings?",
+      "options": [
+        "String subtraction",
+        "Type conversion",
+        "String concatenation (joining them)",
+        "Arithmetic addition"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Operators"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 1,
+      "question": "What is the difference in scope between a variable declared with `let` and one declared with `var`?",
+      "options": [
+        "`let` is global, `var` is local.",
+        "`let` is function-scoped, `var` is block-scoped.",
+        "`let` is block-scoped, `var` is function-scoped.",
+        "There is no difference."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Variables (let/const)"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 1,
+      "question": "How do you write a single-line comment in JavaScript?",
+      "options": [
+        "# Comment",
+        "// Comment",
+        "",
+        "/* Comment */"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Console & Comments"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 1,
+      "question": "The data type for a variable that has been declared but not yet assigned a value is:",
+      "options": [
+        "null",
+        "undefined",
+        "empty",
+        "boolean"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Data Types"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 1,
+      "question": "What is the result of the expression `10 % 3`?",
+      "options": [
+        "3",
+        "1",
+        "3.33",
+        "0"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Operators"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 1,
+      "question": "Which equality operator checks for both value and type equality?",
+      "options": [
+        "==",
+        "=",
+        "!==",
+        "==="
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Operators"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 1,
+      "question": "When declaring a variable that will store a large piece of text, what data type is used?",
+      "options": [
+        "char",
+        "text",
+        "string",
+        "message"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Data Types"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 2,
+      "question": "Which control flow statement is used for a series of potential exact value matches against a single expression?",
+      "options": [
+        "If/Else",
+        "Switch",
+        "Loop",
+        "While"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Switch"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 2,
+      "question": "The `if` statement evaluates a condition. If the condition is false, which keyword allows for a secondary condition to be checked?",
+      "options": [
+        "else if",
+        "or if",
+        "elif",
+        "catch"
+      ],
+      "correctIndex": 0,
+      "topics": [
+        "If/Else"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 2,
+      "question": "In a `for` loop, what statement is typically responsible for updating the counter variable in each iteration?",
+      "options": [
+        "Initialization",
+        "Condition",
+        "Iteration (or Final Expression)",
+        "Body"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Loops"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 2,
+      "question": "Which keyword is used to stop the execution of a loop entirely and continue with the code immediately following the loop?",
+      "options": [
+        "continue",
+        "exit",
+        "break",
+        "return"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Loops"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 2,
+      "question": "What does it mean for a value to be 'truthy' in JavaScript?",
+      "options": [
+        "The value is exactly `true`.",
+        "The value is exactly `1`.",
+        "The value evaluates to `true` when used in a Boolean context (e.g., an `if` statement).",
+        "The value is a string."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Truthiness"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 2,
+      "question": "The values `0`, `\"\"` (empty string), `null`, `undefined`, and `NaN` are all examples of:",
+      "options": [
+        "Truthy values",
+        "Falsy values",
+        "Boolean values",
+        "Invalid values"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Truthiness"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 2,
+      "question": "What is the equivalent of the `for (variable in object)` loop for iterating over the values of an array *without* needing the index?",
+      "options": [
+        "`for (let i of array)`",
+        "`for (let i in array)`",
+        "`array.forEach(i => ...)`",
+        "`while (array.hasNext())`"
+      ],
+      "correctIndex": 0,
+      "topics": [
+        "Loops"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 2,
+      "question": "Which logical operator returns `true` if *at least one* of its operands is truthy?",
+      "options": [
+        "&&",
+        "!",
+        "||",
+        "&"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "If/Else"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 2,
+      "question": "What is the purpose of the `default` case in a `switch` statement?",
+      "options": [
+        "It is always executed.",
+        "It is executed if none of the `case` values match the expression.",
+        "It is executed only on the first run.",
+        "It is a required case."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Switch"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 2,
+      "question": "What control structure provides a way to repeat a block of code as long as a specified condition remains true?",
+      "options": [
+        "if statement",
+        "switch statement",
+        "while loop",
+        "function declaration"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Loops"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 3,
+      "question": "What is a function defined with the `function` keyword and assigned to a variable called?",
+      "options": [
+        "Arrow Function",
+        "Callback Function",
+        "Function Declaration",
+        "Function Expression"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Function Declarations/Expressions"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 3,
+      "question": "What is the primary difference between a Function Declaration and a Function Expression in terms of 'hoisting'?",
+      "options": [
+        "Declarations are hoisted; Expressions are not (only the variable is).",
+        "Expressions are hoisted; Declarations are not.",
+        "Neither are hoisted.",
+        "Both are fully hoisted."
+      ],
+      "correctIndex": 0,
+      "topics": [
+        "Scope & Hoisting"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 3,
+      "question": "What type of function syntax uses the `=>` operator and automatically binds `this` from the surrounding lexical context?",
+      "options": [
+        "Generator Function",
+        "Anonymous Function",
+        "Arrow Function",
+        "Callback Function"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Arrow Functions"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 3,
+      "question": "A variable declared with `let` or `const` inside a code block (`{}`) is only accessible within that block. This is known as:",
+      "options": [
+        "Global Scope",
+        "Block Scope",
+        "Function Scope",
+        "Lexical Scope"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Scope & Hoisting"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 3,
+      "question": "What keyword is used to define the value a function sends back to the caller?",
+      "options": [
+        "output",
+        "result",
+        "return",
+        "send"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Parameters & Return"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 3,
+      "question": "In the function `function add(a, b) { ... }`, what are `a` and `b` called?",
+      "options": [
+        "Arguments",
+        "Properties",
+        "Variables",
+        "Parameters"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Parameters & Return"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 3,
+      "question": "Which of the following is an advantage of using Arrow Functions for simple, single-expression operations?",
+      "options": [
+        "They are block-scoped.",
+        "They require a `return` keyword.",
+        "Implicit return (no curly braces needed) and concise syntax.",
+        "They are always hoisted."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Arrow Functions"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 3,
+      "question": "If a function is called with fewer arguments than parameters, what value is assigned to the missing parameters?",
+      "options": [
+        "0",
+        "null",
+        "undefined",
+        "An empty string"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Parameters & Return"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 3,
+      "question": "What is the primary difference between a `var`-declared variable's hoisting behavior and a `let`/`const`-declared variable's hoisting behavior?",
+      "options": [
+        "`var` is hoisted and initialized to `undefined`; `let`/`const` are hoisted but remain in the 'Temporal Dead Zone' until defined.",
+        "`var` is not hoisted at all.",
+        "Only `let`/`const` are hoisted.",
+        "`var` is block-scoped."
+      ],
+      "correctIndex": 0,
+      "topics": [
+        "Scope & Hoisting"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 3,
+      "question": "In a regular function (not an arrow function), what determines the value of the `this` keyword?",
+      "options": [
+        "The surrounding lexical scope.",
+        "The function's name.",
+        "How the function is called (its execution context).",
+        "The `global` object."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Function Declarations/Expressions"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 4,
+      "question": "Which Array method executes a provided function once for each array element, creating a *new* array with the results?",
+      "options": [
+        "forEach()",
+        "filter()",
+        "reduce()",
+        "map()"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Arrays & Methods"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 4,
+      "question": "What is the process of extracting values from arrays or properties from objects into distinct variables using concise syntax?",
+      "options": [
+        "Iteration",
+        "Slicing",
+        "Destructuring",
+        "Cloning"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Objects & Destructuring"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 4,
+      "question": "Which built-in object is similar to a regular JavaScript object but allows keys of *any* type (not just strings or Symbols)?",
+      "options": [
+        "Set",
+        "Array",
+        "Map",
+        "Object.keys"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Maps/Sets"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 4,
+      "question": "The `for...of` loop is used to iterate over the values of iterable objects. Which loop is used to iterate over the *keys* (property names) of an object?",
+      "options": [
+        "for...in",
+        "for...each",
+        "for...value",
+        "for...key"
+      ],
+      "correctIndex": 0,
+      "topics": [
+        "Iteration"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 4,
+      "question": "Which Array method creates a *new* array containing all elements that pass a test implemented by the provided function?",
+      "options": [
+        "find()",
+        "some()",
+        "filter()",
+        "every()"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Arrays & Methods"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 4,
+      "question": "What is the output of the following destructuring assignment? `const [a, b] = [10, 20, 30];`",
+      "options": [
+        "a=10, b=20, 30 is ignored",
+        "a=10, b=20, 30 is an error",
+        "a=10, b=30",
+        "a=[10, 20, 30], b=undefined"
+      ],
+      "correctIndex": 0,
+      "topics": [
+        "Arrays & Methods",
+        "Objects & Destructuring"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 4,
+      "question": "What is the primary characteristic of the JavaScript `Set` object?",
+      "options": [
+        "It stores key-value pairs.",
+        "It stores only unique values of any type.",
+        "It stores ordered, mutable elements.",
+        "It can only store string values."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Maps/Sets"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 4,
+      "question": "What is the most concise syntax for creating an object where the key names are the same as the variable names holding the values (e.g., `const x = 5; const obj = {x};`)?",
+      "options": [
+        "Property Value Shorthand",
+        "Object Assignment",
+        "Property Initialization",
+        "Key-Value Mapping"
+      ],
+      "correctIndex": 0,
+      "topics": [
+        "Objects & Destructuring"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 4,
+      "question": "Which array method reduces the array to a single value by executing a reducer function on each element?",
+      "options": [
+        "map()",
+        "forEach()",
+        "pop()",
+        "reduce()"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "Arrays & Methods"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 4,
+      "question": "The `[...iterable]` syntax (Spread Syntax) is often used for:",
+      "options": [
+        "Creating a deep clone of an object.",
+        "Converting a Map or Set back into an Array.",
+        "Defining a function with infinite arguments.",
+        "Checking for element existence."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Maps/Sets",
+        "Iteration"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 5,
+      "question": "An object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value is called a:",
+      "options": [
+        "Callback",
+        "Promise",
+        "Generator",
+        "Observable"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Promises"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 5,
+      "question": "Which keyword is used inside an `async` function to pause its execution until a Promise is resolved or rejected?",
+      "options": [
+        "wait",
+        "defer",
+        "async",
+        "await"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "async/await"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 5,
+      "question": "What method is used on a Promise to handle the successful result of the asynchronous operation?",
+      "options": [
+        ".catch()",
+        ".then()",
+        ".finally()",
+        ".resolve()"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Promises"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 5,
+      "question": "The built-in browser API commonly used to make HTTP requests to fetch resources (like JSON data) from a server is:",
+      "options": [
+        "XMLHttpRequest (XHR)",
+        "Fetch/API Calls",
+        "Promise.all",
+        "jQuery.ajax"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Fetch/API Calls"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 5,
+      "question": "When using `async/await`, how should you handle errors (rejected Promises)?",
+      "options": [
+        "Using a `.catch()` attached to the function call.",
+        "Using a standard `if/else` block.",
+        "Using a `try...catch` block around the `await` calls.",
+        "The errors are automatically suppressed."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "async/await",
+        "Error Handling"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 5,
+      "question": "A Promise that has successfully completed its operation is said to be in which state?",
+      "options": [
+        "Pending",
+        "Fulfilled (or Resolved)",
+        "Rejected",
+        "Settled"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Promises"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 5,
+      "question": "What is the primary benefit of using `async/await` over chained `.then()` calls with Promises?",
+      "options": [
+        "It makes the code synchronous.",
+        "It improves memory usage.",
+        "It makes asynchronous code look and behave more like synchronous code, improving readability.",
+        "It eliminates the need for error handling."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "async/await"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 5,
+      "question": "What is the purpose of the `finally()` method on a Promise?",
+      "options": [
+        "To execute code only if the Promise is rejected.",
+        "To execute code only if the Promise is resolved.",
+        "To execute code after the Promise is settled (resolved or rejected).",
+        "To define the initial state of the Promise."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Promises"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 5,
+      "question": "The global `window.fetch()` function, by default, returns a Promise that resolves with a:",
+      "options": [
+        "JSON object.",
+        "Response object.",
+        "String of data.",
+        "Boolean value."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Fetch/API Calls"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 5,
+      "question": "What standard JavaScript object is used to capture and propagate execution errors and other exceptional events?",
+      "options": [
+        "The `Catch` object.",
+        "The `Error` object.",
+        "The `Exception` object.",
+        "The `Result` object."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Error Handling"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 6,
+      "question": "What is the standard JavaScript specification for importing and exporting functionality between files?",
+      "options": [
+        "CommonJS",
+        "AMD",
+        "ES Modules",
+        "UMD"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Modules"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 6,
+      "question": "What does DOM stand for?",
+      "options": [
+        "Data Object Model",
+        "Document Order Model",
+        "Digital Output Manager",
+        "Document Object Model"
+      ],
+      "correctIndex": 3,
+      "topics": [
+        "DOM Basics"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 6,
+      "question": "Which method is used to attach a function that should be executed when a specific event (e.g., a click) occurs on an HTML element?",
+      "options": [
+        "element.click()",
+        "element.listen('click', func)",
+        "element.addEventListener('click', func)",
+        "element.onEvent('click', func)"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Events"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 6,
+      "question": "What keyword is used to make functionality from a file available to other files?",
+      "options": [
+        "include",
+        "expose",
+        "export",
+        "import"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Modules"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 6,
+      "question": "What is the DOM method used to retrieve a reference to a single HTML element by its `id` attribute?",
+      "options": [
+        "document.querySelector('#id')",
+        "document.getElementById('id')",
+        "document.getElementsByName('id')",
+        "document.getDOMById('id')"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "DOM Basics"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 6,
+      "question": "The concept of 'Event Bubbling' refers to:",
+      "options": [
+        "An event being captured first and then propagating down the DOM tree.",
+        "An event propagating from the element where it originated up through its ancestors in the DOM tree.",
+        "An event being executed only on the top-level element.",
+        "A memory leak related to event handlers."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Events"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 6,
+      "question": "To avoid large performance penalties, which JavaScript method is recommended for high-frequency DOM manipulation/animation that is synchronized with the browser's repaint cycle?",
+      "options": [
+        "setTimeout()",
+        "setInterval()",
+        "requestAnimationFrame()",
+        "animate()"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Performance"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 6,
+      "question": "What is the primary characteristic of a 'Default Export' in ES Modules?",
+      "options": [
+        "It can only export variables.",
+        "It must be named when imported.",
+        "There can only be one per module, and it can be imported with any name.",
+        "It is block-scoped."
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Modules"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 6,
+      "question": "What is 'reflow' or 'layout' in the context of DOM manipulation and performance?",
+      "options": [
+        "The process of reloading the entire page.",
+        "The browser recalculating the size and position of elements on the page.",
+        "The speed of JavaScript execution.",
+        "A security vulnerability."
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Performance"
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "difficulty": 6,
+      "question": "Which method is used to create a *new* HTML element node in JavaScript?",
+      "options": [
+        "document.newElement('div')",
+        "document.createElement('div')",
+        "document.appendElement('div')",
+        "document.node('div')"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "DOM Basics"
+      ]
+    },
+    {
+      "language": "C",
+      "difficulty": 1,
+      "question": "Which header file must be included in a C program to use the standard input/output functions like `printf()`?",
+      "options": [
+        "`<main.h>`",
+        "`<stdlib.h>`",
+        "`<stdio.h>`",
+        "`<iostream>`"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Hello World",
+        "Basic Syntax"
+      ]
+    },
+    {
+      "language": "C",
+      "difficulty": 1,
+      "question": "What is the primary function used to print output to the console in C?",
+      "options": [
+        "print()",
+        "cout <<",
+        "printf()",
+        "display()"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Hello World"
+      ]
+    },
+    {
+      "language": "C",
+      "difficulty": 1,
+      "question": "All C statements must terminate with which character?",
+      "options": [
+        "Colon (`:`)",
+        "Period (`.`)",
+        "Semicolon (`;`)",
+        "Comma (`,)"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Basic Syntax"
+      ]
+    },
+    {
+      "language": "C",
+      "difficulty": 1,
+      "question": "Which data type is used to store a single character (e.g., 'A')?",
+      "options": [
+        "string",
+        "char",
+        "byte",
+        "int"
+      ],
+      "correctIndex": 1,
+      "topics": [
+        "Variables & Data Types"
+      ]
+    },
+    {
+      "language": "C",
+      "difficulty": 1,
+      "question": "How do you declare and initialize an integer variable named `age` to `25`?",
+      "options": [
+        "age = 25;",
+        "int 25 = age;",
+        "int age = 25;",
+        "var age: int = 25;"
+      ],
+      "correctIndex": 2,
+      "topics": [
+        "Variables & Data Types"
+      ]
+    },
+      {
+        "language": "C",
+        "difficulty": 1,
+        "question": "Which function serves as the starting point for execution in every C program?",
+        "options": [
+          "start()",
+          "main()",
+          "begin()",
+          "init()"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Hello World",
+          "Basic Syntax"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 1,
+        "question": "What is the correct way to declare an integer variable named 'count' and assign it the value 10?",
+        "options": [
+          "count int = 10;",
+          "int count = 10;",
+          "variable count = 10;",
+          "i count = 10;"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Variables & Data Types"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 1,
+        "question": "Which header file is typically included for standard input/output functions like printf() and scanf()?",
+        "options": [
+          "stdlib.h",
+          "string.h",
+          "stdio.h",
+          "math.h"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Basic Syntax"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 1,
+        "question": "Which data type is used to store a single character (e.g., 'A')?",
+        "options": [
+          "string",
+          "char",
+          "byte",
+          "int"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Variables & Data Types"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 1,
+        "question": "Every C statement must end with which symbol?",
+        "options": [
+          ".",
+          ":",
+          ";",
+          ","
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Basic Syntax"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 1,
+        "question": "What is the primary purpose of the `#include` preprocessor directive?",
+        "options": [
+          "To define a macro",
+          "To link external libraries",
+          "To include the contents of a header file",
+          "To start a comment block"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Basic Syntax"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 1,
+        "question": "The format specifier `%f` is used to print which type of data?",
+        "options": [
+          "Integer",
+          "Character",
+          "String",
+          "Float"
+        ],
+        "correctIndex": 3,
+        "topics": [
+          "Basic Syntax"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 1,
+        "question": "Which set of characters represents a single-line comment in C?",
+        "options": [
+          "//",
+          "",
+          "/* */",
+          "#"
+        ],
+        "correctIndex": 0,
+        "topics": [
+          "Comments"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 1,
+        "question": "The keyword `const` is used to declare a variable whose value:",
+        "options": [
+          "is constant throughout the program",
+          "is only used within a function",
+          "can be changed after initialization",
+          "is automatically initialized to zero"
+        ],
+        "correctIndex": 0,
+        "topics": [
+          "Variables & Data Types"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 1,
+        "question": "In C, which value typically indicates a successful execution from the main() function?",
+        "options": [
+          "1",
+          "-1",
+          "Any non-zero value",
+          "0"
+        ],
+        "correctIndex": 3,
+        "topics": [
+          "Basic Syntax"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 2,
+        "question": "Which operator performs the equality comparison in C?",
+        "options": [
+          "=",
+          "==",
+          "equal",
+          "==="
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Operators"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 2,
+        "question": "Which loop is guaranteed to execute its body at least once, regardless of the condition?",
+        "options": [
+          "for loop",
+          "while loop",
+          "do-while loop",
+          "loop-until"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Loops"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 2,
+        "question": "What is the result of the logical OR operator (`||`) if both operands are false (zero)?",
+        "options": [
+          "True (non-zero)",
+          "False (zero)",
+          "1",
+          "Error"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Operators"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 2,
+        "question": "In an `if-else if-else` structure, the final `else` block executes when:",
+        "options": [
+          "The first `if` is true",
+          "Any preceding `else if` is true",
+          "None of the preceding conditions are true",
+          "Always"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "If/Else"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 2,
+        "question": "Which keyword is used to stop the current loop iteration and move to the next one?",
+        "options": [
+          "break",
+          "skip",
+          "continue",
+          "next"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Loops"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 2,
+        "question": "The `switch` statement can primarily be used with which data types for its expression?",
+        "options": [
+          "Float and Double",
+          "Integer and Character",
+          "String",
+          "Boolean"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Switch"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 2,
+        "question": "What is the shortest way to write `x = x - 1;`?",
+        "options": [
+          "x -= 1;",
+          "x--",
+          "x =- 1;",
+          "Both A and B"
+        ],
+        "correctIndex": 3,
+        "topics": [
+          "Operators"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 2,
+        "question": "What is the bitwise AND operator in C?",
+        "options": [
+          "&&",
+          "|",
+          "&",
+          "!"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Operators"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 2,
+        "question": "What keyword is used to specify a block of code to execute if none of the `case` labels match in a `switch` statement?",
+        "options": [
+          "else",
+          "none",
+          "default",
+          "catch"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Switch"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 2,
+        "question": "How many initialization, condition, and increment/decrement expressions are allowed in the header of a `for` loop?",
+        "options": [
+          "One of each",
+          "Any number, separated by commas",
+          "Two of each",
+          "Unlimited expressions in a single comma-separated list"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Loops"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 3,
+        "question": "Which operator is used to get the memory address of a variable (Address-of operator)?",
+        "options": [
+          "*",
+          "&",
+          "^",
+          "@"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Pointers Basics"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 3,
+        "question": "When an argument is passed to a function using its address, it is known as:",
+        "options": [
+          "Pass by Value",
+          "Pass by Copy",
+          "Pass by Reference",
+          "Call by Stack"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Parameters & Return"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 3,
+        "question": "A pointer variable that has not been initialized to any valid address or NULL is called a:",
+        "options": [
+          "Null pointer",
+          "Void pointer",
+          "Wild pointer",
+          "Constant pointer"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Pointers Basics"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 3,
+        "question": "What is the purpose of a function prototype?",
+        "options": [
+          "To execute the function before `main()`",
+          "To allow the function definition to appear after its calls in the source code",
+          "To store the function's internal state",
+          "To create a macro for the function"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Function Declarations"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 3,
+        "question": "What is the scope of a global variable?",
+        "options": [
+          "Local to the function where it is defined",
+          "Limited to a single source file",
+          "Accessible from any function in any file (if declared properly)",
+          "Accessible only from the header file"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Scope"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 3,
+        "question": "When a pointer to an `int` is incremented (`ptr++`), it advances by how many bytes?",
+        "options": [
+          "1 byte",
+          "The size of an `int`",
+          "The size of the pointer itself",
+          "8 bytes"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Pointers Basics"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 3,
+        "question": "Which keyword is used to define a function that does not return any value?",
+        "options": [
+          "null",
+          "void",
+          "none",
+          "returnless"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Parameters & Return"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 3,
+        "question": "A variable declared with the `static` storage class inside a function:",
+        "options": [
+          "Is initialized every time the function is called",
+          "Retains its value between function calls",
+          "Is accessible globally",
+          "Must be a constant"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Scope"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 3,
+        "question": "What does the `return` statement do inside a function?",
+        "options": [
+          "It only stops the execution of the function",
+          "It stops the function and transfers control back to the caller",
+          "It only returns a value to the caller",
+          "It re-executes the function"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Parameters & Return"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 3,
+        "question": "What is a NULL pointer?",
+        "options": [
+          "A pointer to the first element of an array",
+          "A pointer with a value of 0, indicating it points to no memory location",
+          "A pointer that points to a function",
+          "A pointer that has been deallocated"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Pointers Basics"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 4,
+        "question": "In C, what character marks the end of a standard string literal?",
+        "options": [
+          "\\n (newline)",
+          "\\0 (null terminator)",
+          "\\t (tab)",
+          "The closing quote (\")"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Arrays & Strings"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 4,
+        "question": "What is the primary difference between a `struct` and a `union` in C?",
+        "options": [
+          "Struct members share memory, union members do not",
+          "Union members share memory, struct members do not",
+          "Structs can only contain integers, unions can contain any type",
+          "Unions are dynamic, structs are static"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Structs"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 4,
+        "question": "If you have an array `int arr[10]`, what is the valid index range for its elements?",
+        "options": [
+          "1 to 10",
+          "0 to 10",
+          "0 to 9",
+          "1 to 9"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Arrays & Strings"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 4,
+        "question": "Which library function is used to copy one string to another?",
+        "options": [
+          "strcat()",
+          "memcpy()",
+          "strcpy()",
+          "strlen()"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Arrays & Strings"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 4,
+        "question": "When accessing a member of a `struct` variable, which operator is used?",
+        "options": [
+          "-> (Arrow)",
+          "* (Dereference)",
+          ". (Dot)",
+          "& (Address-of)"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Structs"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 4,
+        "question": "The primary benefit of using `typedef` with a `struct` definition is:",
+        "options": [
+          "To enforce memory alignment",
+          "To provide an alias, simplifying future variable declarations",
+          "To make the struct's members private",
+          "To make the struct static"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Structs"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 4,
+        "question": "By default, the first enumerator in an `enum` sequence is assigned which integer value?",
+        "options": [
+          "1",
+          "-1",
+          "0",
+          "A random value"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Enums"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 4,
+        "question": "In C, a two-dimensional array is stored in memory in which order?",
+        "options": [
+          "Column-major order",
+          "Row-major order",
+          "Zig-zag order",
+          "Randomly"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Arrays & Strings"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 4,
+        "question": "Which loop control variable should typically be declared if you are iterating over an array?",
+        "options": [
+          "float",
+          "char",
+          "size_t or int",
+          "double"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Iteration"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 4,
+        "question": "When accessing a member of a `struct` using a pointer to the struct, which operator is used?",
+        "options": [
+          ". (Dot)",
+          "* (Dereference)",
+          "& (Address-of)",
+          "-> (Arrow)"
+        ],
+        "correctIndex": 3,
+        "topics": [
+          "Structs"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 5,
+        "question": "Which function is used to allocate a block of memory dynamically from the heap?",
+        "options": [
+          "new",
+          "calloc()",
+          "malloc()",
+          "create()"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Dynamic Memory (malloc/free)"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 5,
+        "question": "What is the purpose of the `free()` function?",
+        "options": [
+          "To clear the contents of a variable",
+          "To change the size of allocated memory",
+          "To release dynamically allocated memory back to the system",
+          "To initialize a pointer to NULL"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Dynamic Memory (malloc/free)"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 5,
+        "question": "A pointer that points to a memory location that has been explicitly released (freed) is known as a:",
+        "options": [
+          "Null pointer",
+          "Dangling pointer",
+          "Void pointer",
+          "Generic pointer"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Pointers Advanced",
+          "Error Handling"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 5,
+        "question": "Which function is used to open a file in C for file I/O operations?",
+        "options": [
+          "openfile()",
+          "file_open()",
+          "fopen()",
+          "read_file()"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "File I/O"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 5,
+        "question": "What value does `malloc()` return if the requested memory allocation fails?",
+        "options": [
+          "An integer -1",
+          "NULL",
+          "An empty pointer",
+          "The size of the failure"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Dynamic Memory (malloc/free)",
+          "Error Handling"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 5,
+        "question": "The file mode 'a' in `fopen()` is used for:",
+        "options": [
+          "Reading only",
+          "Writing, creating a new file or overwriting an existing one",
+          "Appending to the end of the file",
+          "Reading and writing"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "File I/O"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 5,
+        "question": "Which function is used to read data from a file formatted according to a specified string?",
+        "options": [
+          "fgetc()",
+          "fscanf()",
+          "fread()",
+          "fgets()"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "File I/O"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 5,
+        "question": "What is memory leakage?",
+        "options": [
+          "Using more memory than is available on the machine",
+          "Failing to free dynamically allocated memory, leading to its loss for the program",
+          "Accessing memory outside of allocated bounds",
+          "An error in file I/O operations"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Dynamic Memory (malloc/free)",
+          "Error Handling"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 5,
+        "question": "Which function is used to dynamically change the size of a previously allocated memory block?",
+        "options": [
+          "realloc()",
+          "resize()",
+          "alter()",
+          "free()"
+        ],
+        "correctIndex": 0,
+        "topics": [
+          "Dynamic Memory (malloc/free)"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 5,
+        "question": "What is the purpose of the `void *` pointer type?",
+        "options": [
+          "It points to a constant memory location",
+          "It is a generic pointer that can hold the address of any data type",
+          "It can only point to functions",
+          "It is a pointer that points to nothing and must be NULL"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Pointers Advanced"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 6,
+        "question": "The C preprocessor command `#define` is primarily used to create:",
+        "options": [
+          "A constant variable at runtime",
+          "A macro or preprocessor constant",
+          "A function prototype",
+          "A global variable"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Preprocessor & Macros"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 6,
+        "question": "What is the purpose of the preprocessor directive `#ifndef`?",
+        "options": [
+          "To define a new function",
+          "To check if a specific macro has not been defined",
+          "To perform conditional compilation based on runtime checks",
+          "To define a global constant"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Preprocessor & Macros"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 6,
+        "question": "In the C compilation process, the linker is responsible for:",
+        "options": [
+          "Replacing macros and includes",
+          "Converting C code to assembly",
+          "Combining object files and libraries into an executable",
+          "Performing code optimization"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Make & Build"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 6,
+        "question": "Which tool is commonly used to automate the process of converting source code files into an executable file, based on dependencies?",
+        "options": [
+          "gdb",
+          "make",
+          "gcc",
+          "ld"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Make & Build"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 6,
+        "question": "What does the `volatile` keyword prevent the compiler from doing to a variable?",
+        "options": [
+          "Making it a local variable",
+          "Optimizing away repeated memory accesses to it",
+          "Changing its data type",
+          "Initializing it to zero"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Performance"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 6,
+        "question": "The term 'Endianness' is a concern for portability because it defines:",
+        "options": [
+          "The default return type of main()",
+          "The maximum size of an array",
+          "The byte order used to store multi-byte data (like `int`) in memory",
+          "The version of the C standard used"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Portability"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 6,
+        "question": "Which macro operator is used to paste two tokens together to form a single token?",
+        "options": [
+          "## (Token-pasting)",
+          "# (Stringizing)",
+          "@ (Address)",
+          "& (Bitwise AND)"
+        ],
+        "correctIndex": 0,
+        "topics": [
+          "Preprocessor & Macros"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 6,
+        "question": "The object files (.o or .obj) generated by the compiler contain:",
+        "options": [
+          "Source code with comments",
+          "Machine code and relocation information",
+          "Assembly code only",
+          "The final executable"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Make & Build"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 6,
+        "question": "To suggest to the compiler that a variable should be stored in a CPU register for fastest access, you can use the keyword:",
+        "options": [
+          "static",
+          "volatile",
+          "register",
+          "extern"
+        ],
+        "correctIndex": 2,
+        "topics": [
+          "Performance"
+        ]
+      },
+      {
+        "language": "C",
+        "difficulty": 6,
+        "question": "Using the standard integer types defined in `<stdint.h>` (like `uint32_t`) improves code portability by:",
+        "options": [
+          "Guiding the linker",
+          "Ensuring the types have exact, predictable sizes across systems",
+          "Automatically fixing endianness issues",
+          "Making the variable static"
+        ],
+        "correctIndex": 1,
+        "topics": [
+          "Portability"
+        ]
+      }
+  ]
+}

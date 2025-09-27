@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart'; // Make sure this is auto-generated via Firebase CLI
 import 'screens/splashscreen.dart';
+import 'screens/home_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const CodeLearningApp());
 }
 
@@ -23,7 +22,7 @@ class CodeLearningApp extends StatelessWidget {
         scaffoldBackgroundColor: const Color(0xFF0B1C2C),
         colorScheme: ColorScheme(
           brightness: Brightness.dark,
-          primary: const Color(0xFF4FC3F7),  // Primary Accent
+          primary: const Color(0xFF4FC3F7), // Primary Accent
           onPrimary: Colors.white,
           secondary: const Color(0xFF0288D1), // Shadow or darker blue
           onSecondary: Colors.white,
@@ -39,7 +38,8 @@ class CodeLearningApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const SplashScreen(), // Start with splash, then navigate to WelcomeScreen
+      home:
+          const SplashScreen(), // Start with splash, then navigate to WelcomeScreen
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'welcome_screen.dart';
+import 'home_screen.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -41,7 +41,9 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
           context: context,
           builder: (ctx) => AlertDialog(
             backgroundColor: const Color(0xFF1E2A38),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
             content: Row(
               children: [
                 const Icon(Icons.check_circle, color: Colors.green),
@@ -56,7 +58,10 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
             ),
             actions: [
               TextButton(
-                child: const Text("OK", style: TextStyle(color: Colors.cyanAccent)),
+                child: const Text(
+                  "OK",
+                  style: TextStyle(color: Colors.cyanAccent),
+                ),
                 onPressed: () => Navigator.of(ctx).pop(),
               ),
             ],
@@ -78,7 +83,9 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
           context: context,
           builder: (ctx) => AlertDialog(
             backgroundColor: const Color(0xFF1E2A38),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
             content: Row(
               children: [
                 const Icon(Icons.verified, color: Colors.green),
@@ -93,7 +100,10 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
             ),
             actions: [
               TextButton(
-                child: const Text("OK", style: TextStyle(color: Colors.cyanAccent)),
+                child: const Text(
+                  "OK",
+                  style: TextStyle(color: Colors.cyanAccent),
+                ),
                 onPressed: () => Navigator.of(ctx).pop(),
               ),
             ],
@@ -109,10 +119,10 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
         'createdAt': Timestamp.now(),
       });
 
-      // 🎉 Navigate to welcome screen
+      // 🎉 Navigate to home screen (language selection)
       if (context.mounted) {
         Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const WelcomeScreen()),
+          MaterialPageRoute(builder: (context) => const HomeScreen()),
         );
       }
     } else {
@@ -122,7 +132,9 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
           context: context,
           builder: (ctx) => AlertDialog(
             backgroundColor: const Color(0xFF1E2A38),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
             content: Row(
               children: [
                 const Icon(Icons.error, color: Colors.redAccent),
@@ -137,7 +149,10 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
             ),
             actions: [
               TextButton(
-                child: const Text("OK", style: TextStyle(color: Colors.cyanAccent)),
+                child: const Text(
+                  "OK",
+                  style: TextStyle(color: Colors.cyanAccent),
+                ),
                 onPressed: () => Navigator.of(ctx).pop(),
               ),
             ],
@@ -166,13 +181,17 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
                   TyperAnimatedText(
                     '🎯 A verification link has been sent to your email.',
                     textStyle: GoogleFonts.robotoMono(
-                        fontSize: 16, color: Colors.white),
+                      fontSize: 16,
+                      color: Colors.white,
+                    ),
                     speed: const Duration(milliseconds: 60),
                   ),
                   TyperAnimatedText(
                     '⚡ Verify to unlock your CodeHub account!',
                     textStyle: GoogleFonts.robotoMono(
-                        fontSize: 16, color: Colors.cyanAccent),
+                      fontSize: 16,
+                      color: Colors.cyanAccent,
+                    ),
                     speed: const Duration(milliseconds: 70),
                   ),
                 ],
@@ -180,23 +199,23 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
               ),
               const SizedBox(height: 30),
               isChecking
-                  ? const CircularProgressIndicator(
-                color: Colors.cyanAccent,
-              )
+                  ? const CircularProgressIndicator(color: Colors.cyanAccent)
                   : ElevatedButton.icon(
-                icon: const Icon(Icons.verified),
-                label: const Text("✅ I have verified"),
-                onPressed: checkVerificationStatus,
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.cyanAccent,
-                  foregroundColor: Colors.black,
-                  padding: const EdgeInsets.symmetric(
-                      vertical: 12, horizontal: 24),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-              ),
+                      icon: const Icon(Icons.verified),
+                      label: const Text("✅ I have verified"),
+                      onPressed: checkVerificationStatus,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.cyanAccent,
+                        foregroundColor: Colors.black,
+                        padding: const EdgeInsets.symmetric(
+                          vertical: 12,
+                          horizontal: 24,
+                        ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                    ),
             ],
           ),
         ),

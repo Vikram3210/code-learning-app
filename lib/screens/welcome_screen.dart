@@ -21,11 +21,41 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   final _auth = FirebaseAuth.instance;
   bool isLoading = false;
 
+  @override
+  void initState() {
+    super.initState();
+    // Check if user is already signed in
+    _checkAuthState();
+  }
+
+  void _checkAuthState() {
+    final user = _auth.currentUser;
+    if (user != null) {
+      print('WelcomeScreen: User already signed in: ${user.email}');
+      // Navigate to home if already signed in
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (_) => const HomeScreen()),
+          );
+        }
+      });
+    } else {
+      print('WelcomeScreen: No user signed in');
+    }
+  }
+
   Future<void> loginUser() async {
     setState(() => isLoading = true);
 
-    if (_emailController.text.trim().isEmpty || _passwordController.text.trim().isEmpty) {
-      showPopup("⚠️ Please enter email and password", icon: Icons.warning, color: Colors.orange);
+    if (_emailController.text.trim().isEmpty ||
+        _passwordController.text.trim().isEmpty) {
+      showPopup(
+        "⚠️ Please enter email and password",
+        icon: Icons.warning,
+        color: Colors.orange,
+      );
       setState(() => isLoading = false);
       return;
     }
@@ -58,10 +88,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             if (icon != null) Icon(icon, color: color ?? Colors.white),
             if (icon != null) const SizedBox(width: 10),
             Expanded(
-              child: Text(
-                message,
-                style: const TextStyle(color: Colors.white),
-              ),
+              child: Text(message, style: const TextStyle(color: Colors.white)),
             ),
           ],
         ),
@@ -85,27 +112,20 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/logo.jpg', height: 120),
-              const SizedBox(height: 20),
-
-              AnimatedTextKit(
-                animatedTexts: [
-                  TyperAnimatedText(
-                    'CodeHub',
-                    textStyle: GoogleFonts.pressStart2p(
-                      fontSize: 28,
-                      color: const Color(0xFF4FC3F7),
-                    ),
-                    speed: const Duration(milliseconds: 100),
-                  ),
-                ],
-                isRepeatingAnimation: false,
+              Icon(Icons.videogame_asset, color: Colors.cyanAccent, size: 64),
+              const SizedBox(height: 16),
+              Text(
+                'CodeHub',
+                style: GoogleFonts.pressStart2p(
+                  fontSize: 24,
+                  color: const Color(0xFF4FC3F7),
+                ),
               ),
 
               const SizedBox(height: 16),
 
               Text(
-                'Learn, Practice, and Master Programming',
+                'Level up your coding skills',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.robotoMono(
                   fontSize: 16,
@@ -155,18 +175,18 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 child: isLoading
                     ? const CircularProgressIndicator(color: Colors.cyanAccent)
                     : ElevatedButton(
-                  onPressed: loginUser,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.cyanAccent,
-                    foregroundColor: Colors.black,
-                    padding: const EdgeInsets.symmetric(vertical: 14),
-                    minimumSize: const Size.fromHeight(50),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                  ),
-                  child: const Text("🚀 Login"),
-                ),
+                        onPressed: loginUser,
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.cyanAccent,
+                          foregroundColor: Colors.black,
+                          padding: const EdgeInsets.symmetric(vertical: 14),
+                          minimumSize: const Size.fromHeight(50),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                        ),
+                        child: const Text("🚀 Login"),
+                      ),
               ),
 
               const SizedBox(height: 16),
@@ -206,7 +226,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   onPressed: () async {
                     final user = await AuthService().signInWithGoogle(context);
                     if (context.mounted && user == null) {
-                      showPopup("❌ Google Sign-In failed", icon: Icons.error, color: Colors.redAccent);
+                      showPopup(
+                        "❌ Google Sign-In failed",
+                        icon: Icons.error,
+                        color: Colors.redAccent,
+                      );
                     }
                   },
                   style: OutlinedButton.styleFrom(
@@ -217,7 +241,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       borderRadius: BorderRadius.circular(12),
                     ),
                   ),
-                  icon: Image.asset('assets/google_logo.png', height: 26, width: 26),
+                  icon: Image.asset(
+                    'assets/google_logo.png',
+                    height: 26,
+                    width: 26,
+                  ),
                   label: const Text(
                     "Continue with Google",
                     style: TextStyle(color: Colors.white),
