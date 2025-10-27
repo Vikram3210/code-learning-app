@@ -53,16 +53,6 @@ Users can learn the following programming languages:
 
 Each language has **progressive levels** with **10 multiple-choice questions per level**, encouraging consistent learning.
 
----
-
-## 🖥️ Screenshots
-
-| Language Selection | Level Screen | Profile | Leaderboard |
-|---------------------|---------------|----------|--------------|
-| ![Language Selection](images/language_selection.jpg) | ![Level Screen](images/level.jpg) | ![Profile](images/profile.jpg) | ![Leaderboard](images/leaderboard.jpg) |
-
----
-
 ## ⚙️ Setup Instructions
 
 Follow these steps to run the project locally:
